@@ -19,6 +19,9 @@ const NavButton = styled(Button)(() => ({
   "&:hover::before": {
     left: "0",
   },
+  "&:hover": {
+    background: "none",
+  },
 }));
 
 export default NavButton;
