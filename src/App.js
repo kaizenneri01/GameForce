@@ -1,11 +1,7 @@
 import NavigationBar from "./components/navigationBar/NavigationBar";
 
 function App() {
-  return (
-    <div>
-      <NavigationBar />
-    </div>
-  );
+  return <NavigationBar />;
 }
 
 export default App;
