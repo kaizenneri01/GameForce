@@ -1,4 +1,4 @@
-import NavigationBar from "./components/navigationBar/NavigationBar";
+import NavigationBar from "./components/NavigationBar";
 import Homepage from "./pages/homepage/Homepage";
 
 function App() {
