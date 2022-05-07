@@ -2,6 +2,7 @@ import { Button } from "@mui/material";
 import styled from "@emotion/styled";
 
 const NavButton = styled(Button)(() => ({
+  // fontSize: "rem",
   overflow: "hidden",
   marginRight: "2rem",
   position: "relative",
