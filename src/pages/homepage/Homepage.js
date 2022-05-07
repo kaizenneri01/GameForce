@@ -1,8 +1,9 @@
 import React from "react";
-import LandingContainer from "../../styles/Landingpage/LandingContainer";
+import HomeContainer from "../../styles/Homepage/HomeContainer";
+import axios from "axios";
 
 const Homepage = () => {
-  return <LandingContainer maxWidth={false}>hello</LandingContainer>;
+  return <HomeContainer maxWidth={false}>hello</HomeContainer>;
 };
 
 export default Homepage;
