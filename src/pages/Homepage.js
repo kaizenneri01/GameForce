@@ -1,7 +1,7 @@
 import { CardActions, Grid } from "@mui/material";
 import React from "react";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import { LandingData } from "../data/LandingData";
 
 import {
   CardTitle,
@@ -18,35 +18,36 @@ import {
 const Homepage = () => {
   return (
     <HomeContainer maxWidth={false}>
-      <Grid container item justifyContent="center">
-        <HomeBox component="div">
-          <HomeCard>
-            <CardTitle variant="h2">Resident Evil Village</CardTitle>
-            <CardSubtitle variant="subtitle1">
-              Players control Ethan Winters, who searches for his kidnapped
-              daughter in a village filled with mutant creatures.
-            </CardSubtitle>
-            <CardActions>
-              <CardGenreTitle>Genres:</CardGenreTitle>
-              <CardGenre disableRipple>Horror</CardGenre>
-              <CardGenre disableRipple>Adventure</CardGenre>
-              <CardGenre disableRipple>First Person</CardGenre>
-            </CardActions>
-            <Grid
-              container
-              direction="row"
-              justifyContent="flex-start"
-              alignItems="center"
-            >
-              <CardButton>
-                <CardGenreTitle> purchase now </CardGenreTitle>
-                <ShoppingCartOutlinedIcon />
-              </CardButton>
-              <HeartButton />
-            </Grid>
-          </HomeCard>
-        </HomeBox>
-      </Grid>
+      {LandingData.map((landingInfo, index) => (
+        <Grid container item justifyContent="center" key={index}>
+          <HomeBox component="div">
+            <HomeCard>
+              <CardTitle variant="h2">{landingInfo.title}</CardTitle>
+              <CardSubtitle variant="subtitle1">
+                {landingInfo.description}
+              </CardSubtitle>
+              <CardActions>
+                <CardGenreTitle>Genres:</CardGenreTitle>
+                <CardGenre disableRipple>Horror</CardGenre>
+                <CardGenre disableRipple>Adventure</CardGenre>
+                <CardGenre disableRipple>First Person</CardGenre>
+              </CardActions>
+              <Grid
+                container
+                direction="row"
+                justifyContent="flex-start"
+                alignItems="center"
+              >
+                <CardButton>
+                  <CardGenreTitle> purchase now </CardGenreTitle>
+                  <ShoppingCartOutlinedIcon />
+                </CardButton>
+                <HeartButton />
+              </Grid>
+            </HomeCard>
+          </HomeBox>
+        </Grid>
+      ))}
     </HomeContainer>
   );
 };
