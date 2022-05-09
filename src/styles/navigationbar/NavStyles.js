@@ -1,11 +1,11 @@
-import { Button } from "@mui/material";
+import { Box, Button, Container } from "@mui/material";
 import styled from "@emotion/styled";
 
 const NavButton = styled(Button)(() => ({
   overflow: "hidden",
   marginRight: "2rem",
   position: "relative",
-  color: "black",
+  color: "#232222",
   "&::before": {
     content: '""',
     position: "absolute",
@@ -24,4 +24,14 @@ const NavButton = styled(Button)(() => ({
   },
 }));
 
-export default NavButton;
+const NavLogo = styled(Box)(() => ({
+  height: "3.5rem",
+  width: "6rem",
+  padding: ".5rem",
+}));
+
+const NavContainer = styled(Container)(() => ({
+  backgroundColor: "#EEEEEE",
+}));
+
+export { NavButton, NavLogo, NavContainer };

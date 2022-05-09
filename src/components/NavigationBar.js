@@ -1,9 +1,12 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import NavButton from "../styles/navigationbar/NavButton";
-import NavContainer from "../styles/navigationbar/NavContainer";
+import {
+  NavButton,
+  NavLogo,
+  NavContainer,
+} from "../styles/navigationbar/NavStyles";
+
 import logo from "../Asset/images/gameforce.png";
-import NavLogo from "../styles/navigationbar/NavLogo";
 
 const NavigationBar = () => {
   return (
