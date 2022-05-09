@@ -1,45 +1,25 @@
-import {
-  Button,
-  CardActions,
-  CardContent,
-  Grid,
-  Typography,
-} from "@mui/material";
+import { CardActions, Grid } from "@mui/material";
 import React from "react";
-import ImageOne from "../Asset/images/ResidentEvil8.jpg";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+
 import {
   CardTitle,
-  HomeCardImage,
   HomeBox,
   HomeContainer,
   CardSubtitle,
   HomeCard,
+  CardGenre,
+  CardGenreTitle,
+  CardButton,
+  HeartButton,
 } from "../styles/Homepage/HomeStyle";
 
 const Homepage = () => {
   return (
     <HomeContainer maxWidth={false}>
-      <Grid item container justifyContent="center">
-        <div
-          style={{
-            opacity: ".9",
-            marginTop: "5rem",
-            width: "70vw",
-            height: "80vh",
-            borderRadius: "1.5rem",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            backgroundImage: ` linear-gradient(90deg, #303841, transparent),
-            url(${ImageOne})`,
-          }}
-        >
-          <h1>hello</h1>
-        </div>
-      </Grid>
-
       <Grid container item justifyContent="center">
-        <HomeBox component="div" position="relative" boxShadow={3}>
+        <HomeBox component="div">
           <HomeCard>
             <CardTitle variant="h2">Resident Evil Village</CardTitle>
             <CardSubtitle variant="subtitle1">
@@ -47,18 +27,24 @@ const Homepage = () => {
               daughter in a village filled with mutant creatures.
             </CardSubtitle>
             <CardActions>
-              <Typography>GENRES:</Typography>
-              <Button>Horror</Button>
-              <Button>Adventure</Button>
-              <Button>First Person</Button>
+              <CardGenreTitle>Genres:</CardGenreTitle>
+              <CardGenre disableRipple>Horror</CardGenre>
+              <CardGenre disableRipple>Adventure</CardGenre>
+              <CardGenre disableRipple>First Person</CardGenre>
             </CardActions>
-            <Button>PURCHASE NOW</Button>
+            <Grid
+              container
+              direction="row"
+              justifyContent="flex-start"
+              alignItems="center"
+            >
+              <CardButton>
+                <CardGenreTitle> purchase now </CardGenreTitle>
+                <ShoppingCartOutlinedIcon />
+              </CardButton>
+              <HeartButton />
+            </Grid>
           </HomeCard>
-          <HomeCardImage
-            component="img"
-            alt="resident evil 8"
-            image={ImageOne}
-          />
         </HomeBox>
       </Grid>
     </HomeContainer>

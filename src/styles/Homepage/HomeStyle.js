@@ -1,15 +1,7 @@
-import {
-  CardMedia,
-  Typography,
-  Container,
-  Box,
-  CardContent,
-} from "@mui/material";
+import { Typography, Container, Box, CardContent, Button } from "@mui/material";
 import styled from "@emotion/styled";
-
-const HomeCardImage = styled(CardMedia)(() => ({
-  borderRadius: "1.4rem",
-}));
+import ImageOne from "../../Asset/images/ResidentEvil8.jpg";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 const CardTitle = styled(Typography)(() => ({
   fontWeight: "bolder",
@@ -24,28 +16,74 @@ const HomeContainer = styled(Container)(() => ({
 }));
 
 const HomeBox = styled(Box)(() => ({
+  marginTop: "5rem",
   width: "70vw",
-  marginTop: "3rem",
+  height: "80vh",
   borderRadius: "1.5rem",
+  backgroundSize: "cover",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center",
+  backgroundImage: ` linear-gradient(90deg, #303841, transparent),
+  url(${ImageOne})`,
 }));
 
 const CardSubtitle = styled(Typography)(() => ({
   color: "#AEAEAE",
   fontWeight: "lighter",
-  overflowWrap: "break-word",
-  inlineSize: "30rem",
+  wordWrap: "break-word",
+  maxWidth: "40%",
 }));
 
 const HomeCard = styled(CardContent)(() => ({
-  position: "absolute",
-  marginTop: "4rem",
-  background: "linear-gradient(red, yellow)",
+  marginTop: "5rem",
+  marginLeft: "2rem",
+}));
+
+const CardGenre = styled(Button)(() => ({
+  color: "#EEEEEE",
+  fontWeight: "lighter",
+  backgroundColor: "#3A4750",
+  borderRadius: ".5rem",
+  fontSize: ".7rem",
+  "&:hover": {
+    background: "#3A4750",
+  },
+}));
+
+const CardGenreTitle = styled(Typography)(() => ({
+  color: "#EEEEEE",
+  marginRight: "1rem",
+  fontWeight: "bold",
+  textTransform: "uppercase",
+}));
+
+const CardButton = styled(Button)(() => ({
+  marginTop: "1rem",
+  fontSize: "1rem",
+  padding: "1rem 2rem",
+  backgroundColor: "#D72323",
+  borderRadius: ".8rem",
+  color: "#EEEEEE",
+  textTransform: "capitalize",
+  "&:hover": {
+    backgroundColor: "#232222",
+  },
+}));
+
+const HeartButton = styled(FavoriteBorderIcon)(() => ({
+  color: "#EEEEEE",
+  fontSize: "2.5rem",
+  marginLeft: "1rem",
+  marginTop: ".5rem",
 }));
 
 export {
-  HomeCardImage,
+  HeartButton,
+  CardButton,
   CardTitle,
   HomeContainer,
+  CardGenreTitle,
+  CardGenre,
   HomeBox,
   CardSubtitle,
   HomeCard,
