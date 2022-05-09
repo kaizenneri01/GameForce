@@ -20,7 +20,7 @@ const Homepage = () => {
     <HomeContainer maxWidth={false}>
       {LandingData.map((landingInfo, index) => (
         <Grid container item justifyContent="center" key={index}>
-          <HomeBox component="div">
+          <HomeBox component="div" data={landingInfo.image}>
             <HomeCard>
               <CardTitle variant="h2">{landingInfo.title}</CardTitle>
               <CardSubtitle variant="subtitle1">

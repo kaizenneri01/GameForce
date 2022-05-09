@@ -1,8 +1,6 @@
 import { Typography, Container, Box, CardContent, Button } from "@mui/material";
 import styled from "@emotion/styled";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import { LandingData } from "../../data/LandingData";
-import ImageOne from "../../Asset/images/ResidentEvil8.jpg";
 
 const CardTitle = styled(Typography)(() => ({
   fontWeight: "bolder",
@@ -16,7 +14,7 @@ const HomeContainer = styled(Container)(() => ({
   height: "100%",
 }));
 
-const HomeBox = styled(Box)(() => ({
+const HomeBox = styled(Box)(({ data }) => ({
   marginTop: "5rem",
   width: "70vw",
   height: "80vh",
@@ -24,11 +22,8 @@ const HomeBox = styled(Box)(() => ({
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center",
-  backgroundImage: LandingData.map(
-    (data) =>
-      ` linear-gradient(90deg, #303841, transparent),
-    url(${data.image})`
-  ),
+  backgroundImage: ` linear-gradient(90deg, #303841, transparent),
+    url(${data})`,
 }));
 
 const CardSubtitle = styled(Typography)(() => ({
