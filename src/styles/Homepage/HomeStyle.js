@@ -11,11 +11,14 @@ const CardTitle = styled(Typography)(() => ({
 
 const HomeContainer = styled(Container)(() => ({
   backgroundColor: "#303841",
-  height: "100%",
+  height: "200vh",
 }));
 
 const HomeBox = styled(Box)(({ data }) => ({
-  paddingBottom: "3rem",
+  marginLeft: "auto",
+  marginRight: "auto",
+  display: "flex",
+  alignItems: "center",
   marginBottom: "2rem",
   marginTop: "5rem",
   width: "70vw",
@@ -36,8 +39,7 @@ const CardSubtitle = styled(Typography)(() => ({
 }));
 
 const HomeCard = styled(CardContent)(() => ({
-  marginTop: "5rem",
-  marginLeft: "2rem",
+  marginLeft: "3rem",
 }));
 
 const CardGenre = styled(Button)(() => ({
