@@ -1,4 +1,4 @@
-import { CardActions, Grid } from "@mui/material";
+import { CardActions, Grid, Typography } from "@mui/material";
 import React from "react";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { LandingData } from "../data/LandingData";
@@ -41,9 +41,9 @@ const Homepage = () => {
                 </CardSubtitle>
                 <CardActions>
                   <CardGenreTitle>Genres:</CardGenreTitle>
-                  <CardGenre disableRipple>Horror</CardGenre>
-                  <CardGenre disableRipple>Adventure</CardGenre>
-                  <CardGenre disableRipple>First Person</CardGenre>
+                  {landingInfo.genres.map((genre) => (
+                    <CardGenre disableRipple>{genre}</CardGenre>
+                  ))}
                 </CardActions>
 
                 <Grid
@@ -63,6 +63,12 @@ const Homepage = () => {
           </Grid>
         ))}
       </Slider>
+      <Grid container>
+        <Grid item>
+          <Typography>featured & recommended</Typography>
+        </Grid>
+        <Grid container item></Grid>
+      </Grid>
     </HomeContainer>
   );
 };

@@ -78,6 +78,7 @@ const HeartButton = styled(FavoriteBorderIcon)(() => ({
   fontSize: "2.5rem",
   marginLeft: "1rem",
   marginTop: ".5rem",
+  cursor: "pointer",
 }));
 
 export {
