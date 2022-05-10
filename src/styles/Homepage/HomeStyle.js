@@ -15,6 +15,8 @@ const HomeContainer = styled(Container)(() => ({
 }));
 
 const HomeBox = styled(Box)(({ data }) => ({
+  paddingBottom: "3rem",
+  marginBottom: "2rem",
   marginTop: "5rem",
   width: "70vw",
   height: "80vh",
