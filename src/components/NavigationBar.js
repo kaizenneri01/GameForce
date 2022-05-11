@@ -6,7 +6,7 @@ import {
   NavContainer,
 } from "../styles/navigationbar/NavStyles";
 
-import logo from "../Asset/images/landingpage/gameforce.png";
+import logo from "../Asset/images/games/gameforce.png";
 
 const NavigationBar = () => {
   return (
