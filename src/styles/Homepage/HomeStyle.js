@@ -81,7 +81,17 @@ const HeartButton = styled(FavoriteBorderIcon)(() => ({
   cursor: "pointer",
 }));
 
+const HomeGenreTitle = styled(Typography)(() => ({
+  color: "#EEEEEE",
+  fontSize: "2rem",
+  borderBottom: "5px solid #D72323",
+  fontWeight: "bolder",
+  margin: "5rem 0",
+  textTransform: "uppercase",
+}));
+
 export {
+  HomeGenreTitle,
   HeartButton,
   CardButton,
   CardTitle,

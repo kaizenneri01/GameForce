@@ -14,7 +14,9 @@ import {
   CardGenreTitle,
   CardButton,
   HeartButton,
+  HomeGenreTitle,
 } from "../styles/Homepage/HomeStyle";
+import GameBoxLarge from "../components/GameBoxLarge";
 
 const Homepage = () => {
   const settings = {
@@ -64,8 +66,13 @@ const Homepage = () => {
         ))}
       </Slider>
       <Grid container>
-        <Grid item>
-          <Typography>featured & recommended</Typography>
+        <Grid container item justifyContent="center">
+          <HomeGenreTitle>featured & recommended</HomeGenreTitle>
+        </Grid>
+        <Grid container item justifyContent="center">
+          <GameBoxLarge />
+          <GameBoxLarge />
+          <GameBoxLarge />
         </Grid>
         <Grid container item></Grid>
       </Grid>

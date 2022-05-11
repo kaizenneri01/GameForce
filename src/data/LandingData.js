@@ -1,8 +1,8 @@
-import ImageOne from "../Asset/images/ResidentEvil8.jpg";
-import ImageTwo from "../Asset/images/Horizon.jpg";
-import ImageThree from "../Asset/images/Cyberpunk.jpg";
-import ImageFour from "../Asset/images/Borderlands3.jpg";
-import ImageFive from "../Asset/images/MonsterHunter.jpg";
+import ImageOne from "../Asset/images/landingpage/ResidentEvil8.jpg";
+import ImageTwo from "../Asset/images/landingpage/Horizon.jpg";
+import ImageThree from "../Asset/images/landingpage/Cyberpunk.jpg";
+import ImageFour from "../Asset/images/landingpage/Borderlands3.jpg";
+import ImageFive from "../Asset/images/landingpage/MonsterHunter.jpg";
 
 export const LandingData = [
   {
