@@ -1,4 +1,4 @@
-import { CardActions, Grid } from "@mui/material";
+import { CardActions, Grid, Typography } from "@mui/material";
 import React from "react";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { GameData } from "../data/GameData";
@@ -17,6 +17,7 @@ import {
   HomeGenreTitle,
 } from "../styles/HomeStyle";
 import GameBoxLarge from "../components/GameBoxLarge";
+import GameBoxSmall from "../components/GameBoxSmall";
 
 const Homepage = () => {
   const settings = {
@@ -80,6 +81,17 @@ const Homepage = () => {
               <GameBoxLarge key={index} {...games} />
             )
           )}
+        </Grid>
+        <Grid container>
+          <Grid container>
+            <Typography>special offer</Typography>
+          </Grid>
+          <Grid contain item>
+            <GameBoxSmall />
+            <GameBoxSmall />
+            <GameBoxSmall />
+            <GameBoxSmall />
+          </Grid>
         </Grid>
       </Grid>
     </HomeContainer>
