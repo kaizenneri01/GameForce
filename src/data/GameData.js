@@ -6,6 +6,9 @@ import ImageFive from "../Asset/images/games/MonsterHunter.jpg";
 import GameOne from "../Asset/images/games/godofwar.jpg";
 import GameTwo from "../Asset/images/games/shadowoftomb.jpg";
 import GameThree from "../Asset/images/games/nba.jpg";
+import GameFour from "../Asset/images/games/reddead2.png";
+import GameFive from "../Asset/images/games/dyinglight2.jpg";
+import GameSix from "../Asset/images/games/eldenring.jpg";
 
 export const GameData = [
   {
@@ -79,30 +82,23 @@ export const GameData = [
     type: "featured",
   },
   {
-    image: "",
-    title: "",
-    description: "",
-    publisher: "",
-    genre: [],
-    type: "",
-    cost: "",
+    image: GameFour,
+    title: "red dead 2",
+    description:
+      "Winner of over 175 Game of the Year Awards and recipient of over 250 perfect scores, RDR2 is the epic tale of outlaw Arthur Morgan and the infamous Van der Linde gang.",
+    publisher: "rockstar games",
+    genre: ["open world", "adventure", "action", "shooting"],
+    cost: "P 1,500.50",
+    type: "featured",
   },
   {
-    image: "",
-    title: "",
-    description: "",
-    publisher: "",
-    genre: [],
-    type: "",
-    cost: "",
-  },
-  {
-    image: "",
-    title: "",
-    description: "",
-    publisher: "",
-    genre: [],
-    type: "",
-    cost: "",
+    image: GameFive,
+    title: "dying light 2",
+    description:
+      "Dying Light 2 Stay Human is a 2022 action role-playing game developed and published by Techland. The sequel to Dying Light",
+    publisher: "techland",
+    genre: ["open world", "zombies", "co-op"],
+    cost: "P 2,900.00",
+    type: "featured",
   },
 ];

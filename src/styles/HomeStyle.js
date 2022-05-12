@@ -11,7 +11,7 @@ const CardTitle = styled(Typography)(() => ({
 
 const HomeContainer = styled(Container)(() => ({
   backgroundColor: "#303841",
-  height: "200vh",
+  height: "100%",
 }));
 
 const HomeBox = styled(Box)(({ data }) => ({
@@ -86,7 +86,7 @@ const HomeGenreTitle = styled(Typography)(() => ({
   fontSize: "2rem",
   borderBottom: "5px solid #D72323",
   fontWeight: "bolder",
-  margin: "5rem 0",
+  marginTop: "5rem",
   textTransform: "uppercase",
 }));
 

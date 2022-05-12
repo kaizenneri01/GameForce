@@ -1,25 +1,31 @@
-import {
-  Button,
-  Card,
-  CardContent,
-  CardMedia,
-  Typography,
-} from "@mui/material";
 import React from "react";
+import { CardContent, Grid } from "@mui/material";
+import {
+  GameCard,
+  GameDesc,
+  GameGenre,
+  GameGenreText,
+  GameImage,
+  GameTitle,
+} from "../styles/GameBoxLargeStyles";
 
 const GameBoxLarge = ({ ...games }) => {
   return (
-    <Card>
-      <CardMedia component="img" src={games.image} alt="sample" />
+    <GameCard elevation={5}>
+      <GameImage component="img" src={games.image} alt={games.title} />
       <CardContent>
-        <Typography variant="h6">{games.title}</Typography>
-        <Typography variant="subtitle1">{games.description}</Typography>
-        <Typography> genre</Typography>
-        {games.genre.map((type) => (
-          <Button>{type}</Button>
-        ))}
+        <Grid container>
+          <GameTitle variant="h6">{games.title}</GameTitle>
+          <GameDesc>{games.description}</GameDesc>
+          <GameGenreText> genre:</GameGenreText>
+          {games.genre.map((type, index) => (
+            <GameGenre key={index} disableRipple>
+              {type}
+            </GameGenre>
+          ))}
+        </Grid>
       </CardContent>
-    </Card>
+    </GameCard>
   );
 };
 

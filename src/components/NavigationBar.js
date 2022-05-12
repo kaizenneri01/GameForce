@@ -1,10 +1,6 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import {
-  NavButton,
-  NavLogo,
-  NavContainer,
-} from "../styles/navigationbar/NavStyles";
+import { NavButton, NavLogo, NavContainer } from "../styles/NavStyles";
 
 import logo from "../Asset/images/games/gameforce.png";
 

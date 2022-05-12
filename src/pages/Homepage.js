@@ -15,7 +15,7 @@ import {
   CardButton,
   HeartButton,
   HomeGenreTitle,
-} from "../styles/Homepage/HomeStyle";
+} from "../styles/HomeStyle";
 import GameBoxLarge from "../components/GameBoxLarge";
 
 const Homepage = () => {
@@ -44,8 +44,10 @@ const Homepage = () => {
                   </CardSubtitle>
                   <CardActions>
                     <CardGenreTitle>Genres:</CardGenreTitle>
-                    {landingInfo.genres.map((genre) => (
-                      <CardGenre disableRipple>{genre}</CardGenre>
+                    {landingInfo.genres.map((genre, index) => (
+                      <CardGenre key={index} disableRipple>
+                        {genre}
+                      </CardGenre>
                     ))}
                   </CardActions>
 
@@ -67,7 +69,8 @@ const Homepage = () => {
           )
         )}
       </Slider>
-      <Grid container>
+
+      <Grid container sx={{ paddingBottom: "5rem" }}>
         <Grid container item justifyContent="center">
           <HomeGenreTitle>featured & recommended</HomeGenreTitle>
         </Grid>
@@ -78,7 +81,6 @@ const Homepage = () => {
             )
           )}
         </Grid>
-        <Grid container item></Grid>
       </Grid>
     </HomeContainer>
   );
