@@ -12,6 +12,7 @@ const CardTitle = styled(Typography)(() => ({
 const HomeContainer = styled(Container)(() => ({
   backgroundColor: "#303841",
   height: "100%",
+  paddingBottom: "5rem",
 }));
 
 const HomeBox = styled(Box)(({ data }) => ({
@@ -90,7 +91,16 @@ const HomeGenreTitle = styled(Typography)(() => ({
   textTransform: "uppercase",
 }));
 
+const SpecialText = styled(Typography)(() => ({
+  color: "#EEEEEE",
+  borderBottom: "2px solid #D72323",
+  textTransform: "uppercase",
+  fontSize: "1.2rem",
+  margin: ".5rem 0 2rem 1rem",
+}));
+
 export {
+  SpecialText,
   HomeGenreTitle,
   HeartButton,
   CardButton,
