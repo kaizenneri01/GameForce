@@ -1,4 +1,3 @@
-import { Card } from "@mui/material";
 import React from "react";
 import { CardBox, CardImage } from "../styles/GameboxSmallStyles";
 

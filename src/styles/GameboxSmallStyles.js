@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 const CardBox = styled(Card)(() => ({
   position: "relative",
   backgroundColor: "black",
+  marginBottom: "1rem",
   "&::before": {
     fontWeight: "bolder",
     position: "absolute",

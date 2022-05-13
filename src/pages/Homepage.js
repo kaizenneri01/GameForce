@@ -1,9 +1,8 @@
-import { CardActions, Grid, Typography } from "@mui/material";
+import { CardActions, Grid } from "@mui/material";
 import React from "react";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { GameData } from "../data/GameData";
 import Slider from "react-slick";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 import {
   CardTitle,
@@ -22,6 +21,7 @@ import {
 } from "../styles/HomeStyle";
 import GameBoxLarge from "../components/GameBoxLarge";
 import GameBoxSmall from "../components/GameBoxSmall";
+import NavigationBar from "../components/NavigationBar";
 
 const Homepage = () => {
   const settings = {
@@ -37,6 +37,7 @@ const Homepage = () => {
 
   return (
     <>
+      <NavigationBar />
       <HomeContainer maxWidth={false}>
         <Slider {...settings}>
           {GameData.filter((list) => list.type === "landing").map(
@@ -103,7 +104,7 @@ const Homepage = () => {
             )
           )}
         </Grid>
-        <Grid container justifyContent="flex-end" sx={{ marginTop: "1rem" }}>
+        <Grid container justifyContent="flex-end">
           <SpecialTextTwo>see more</SpecialTextTwo>
           <SpecialArrow />
         </Grid>
