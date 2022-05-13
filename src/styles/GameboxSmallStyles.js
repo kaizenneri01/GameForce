@@ -29,8 +29,8 @@ const CardBox = styled(Card)(() => ({
 }));
 const CardImage = styled(CardMedia)(() => ({
   position: "relative",
-  height: "10rem",
-  width: "15rem",
+  height: "23vh",
+  width: "15vw",
 }));
 
 export { CardBox, CardImage };

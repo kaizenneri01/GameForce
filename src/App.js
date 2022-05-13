@@ -1,18 +1,17 @@
-import NavigationBar from "./components/NavigationBar";
 import Homepage from "./pages/Homepage";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import GamesPage from "./pages/GamesPage";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-        </Routes>
-      </BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/Games" element={<GamesPage />} />
+      </Routes>
     </>
   );
 }
