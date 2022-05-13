@@ -7,6 +7,11 @@ const GameCard = styled(Card)(() => ({
   backgroundColor: "#3A4750",
   margin: "5rem 1rem 1rem 1rem",
   borderRadius: "1rem",
+  cursor: "pointer",
+  transition: ".3s",
+  "&:hover": {
+    transform: "translate(1px , 1px) scale(1.05)",
+  },
 }));
 
 const GameImage = styled(CardMedia)(() => ({

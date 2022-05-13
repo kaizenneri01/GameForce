@@ -1,6 +1,7 @@
 import { Typography, Container, Box, CardContent, Button } from "@mui/material";
 import styled from "@emotion/styled";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const CardTitle = styled(Typography)(() => ({
   fontWeight: "bolder",
@@ -99,7 +100,35 @@ const SpecialText = styled(Typography)(() => ({
   margin: ".5rem 0 2rem 1rem",
 }));
 
+const SpecialTextTwo = styled(Typography)(() => ({
+  position: "relative",
+  color: "#EEEEEE",
+  textTransform: "uppercase",
+  fontSize: "1rem",
+  overflow: "hidden",
+  cursor: "pointer",
+  "&::before": {
+    content: '""',
+    position: "absolute",
+    top: "80%",
+    left: "-100%",
+    height: "7%",
+    width: "100%",
+    backgroundColor: "red",
+    transition: "0.5s",
+  },
+  "&:hover::before": {
+    left: "0",
+  },
+}));
+
+const SpecialArrow = styled(ArrowForwardIosIcon)(() => ({
+  color: "#EEEEEE",
+}));
+
 export {
+  SpecialArrow,
+  SpecialTextTwo,
   SpecialText,
   HomeGenreTitle,
   HeartButton,
