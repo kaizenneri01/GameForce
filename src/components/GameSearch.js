@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Grid, TextField } from "@mui/material";
 import React, { useState } from "react";
 import {
   FormBox,
@@ -27,48 +27,52 @@ const GameSearch = () => {
   return (
     <>
       <SectionGrid container>
-        <Grid container>
-          <FormBox>
-            <SectionLabel>Section</SectionLabel>
-            <SectionSelect
-              value={section}
-              label="section"
-              onChange={handleChange}
-            >
-              <SectionItem value={1}>Free to play</SectionItem>
-              <SectionItem value={2}>Demos</SectionItem>
-              <SectionItem value={3}>Early access</SectionItem>
-            </SectionSelect>
-          </FormBox>
-          <FormBox>
-            <SectionLabel>Genres</SectionLabel>
-            <SectionSelect
-              value={genres}
-              label="genres"
-              onChange={handleChangeTwo}
-            >
-              <SectionItem value={1}>Horror</SectionItem>
-              <SectionItem value={2}>Action</SectionItem>
-              <SectionItem value={3}>Sport</SectionItem>
-              <SectionItem value={4}>Adventure</SectionItem>
-              <SectionItem value={5}>Open world</SectionItem>
-              <SectionItem value={6}>Shooting</SectionItem>
-            </SectionSelect>
-          </FormBox>
-          <FormBox>
-            <SectionLabel>Support</SectionLabel>
-            <SectionSelect
-              value={support}
-              label="support"
-              onChange={handleChangeThree}
-            >
-              <SectionItem value={1}>LAN</SectionItem>
-              <SectionItem value={3}>Online</SectionItem>
-              <SectionItem value={2}>Single player</SectionItem>
-              <SectionItem value={3}>Multi player</SectionItem>
-            </SectionSelect>
-          </FormBox>
-        </Grid>
+        <FormBox>
+          <SectionLabel>Section</SectionLabel>
+          <SectionSelect
+            value={section}
+            label="section"
+            onChange={handleChange}
+          >
+            <SectionItem value={1}>Free to play</SectionItem>
+            <SectionItem value={2}>Demos</SectionItem>
+            <SectionItem value={3}>Early access</SectionItem>
+          </SectionSelect>
+        </FormBox>
+        <FormBox>
+          <SectionLabel>Genres</SectionLabel>
+          <SectionSelect
+            value={genres}
+            label="genres"
+            onChange={handleChangeTwo}
+          >
+            <SectionItem value={1}>Horror</SectionItem>
+            <SectionItem value={2}>Action</SectionItem>
+            <SectionItem value={3}>Sport</SectionItem>
+            <SectionItem value={4}>Adventure</SectionItem>
+            <SectionItem value={5}>Open world</SectionItem>
+            <SectionItem value={6}>Shooting</SectionItem>
+          </SectionSelect>
+        </FormBox>
+        <FormBox>
+          <SectionLabel>Support</SectionLabel>
+          <SectionSelect
+            value={support}
+            label="support"
+            onChange={handleChangeThree}
+          >
+            <SectionItem value={1}>LAN</SectionItem>
+            <SectionItem value={3}>Online</SectionItem>
+            <SectionItem value={2}>Single player</SectionItem>
+            <SectionItem value={3}>Multi player</SectionItem>
+          </SectionSelect>
+        </FormBox>
+        <TextField
+          id="filled-basic"
+          label="Filled"
+          variant="filled"
+          sx={{ marginLeft: "auto" }}
+        />
       </SectionGrid>
     </>
   );
