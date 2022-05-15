@@ -1,5 +1,15 @@
-import { FormControl, Grid, InputLabel, MenuItem, Select } from "@mui/material";
+import {
+  Box,
+  FormControl,
+  Grid,
+  Input,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+} from "@mui/material";
 import styled from "@emotion/styled";
+import SearchIcon from "@mui/icons-material/Search";
 
 const SectionGrid = styled(Grid)(() => ({
   backgroundColor: "#232222",
@@ -41,4 +51,40 @@ const SectionItem = styled(MenuItem)(() => ({
   fontWeight: "bold",
 }));
 
-export { SectionItem, SectionLabel, SectionSelect, FormBox, SectionGrid };
+const SectionBox = styled(Box)(() => ({
+  marginLeft: "auto",
+  display: "flex",
+  alignItems: "center",
+  marginRight: "2rem",
+}));
+
+const SectionSearch = styled(Input)(() => ({
+  backgroundColor: "#EEEEEE",
+  color: "#505050",
+  height: "2rem",
+  width: "15rem",
+  borderTopLeftRadius: "1rem",
+  borderBottomLeftRadius: "1rem",
+  paddingLeft: "1rem",
+}));
+
+const SectionIcon = styled(SearchIcon)(() => ({
+  color: "#949494",
+  backgroundColor: "#EEEEEE",
+  height: "2rem",
+  padding: "0 .5rem",
+  marginRight: "2rem",
+  borderBottomRightRadius: "1rem",
+  borderTopRightRadius: "1rem",
+}));
+
+export {
+  SectionIcon,
+  SectionBox,
+  SectionSearch,
+  SectionItem,
+  SectionLabel,
+  SectionSelect,
+  FormBox,
+  SectionGrid,
+};

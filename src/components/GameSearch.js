@@ -1,10 +1,20 @@
-import { Grid, TextField } from "@mui/material";
+import {
+  Grid,
+  IconButton,
+  Input,
+  InputAdornment,
+  TextField,
+} from "@mui/material";
+import { Box } from "@mui/system";
 import React, { useState } from "react";
 import {
   FormBox,
+  SectionBox,
   SectionGrid,
+  SectionIcon,
   SectionItem,
   SectionLabel,
+  SectionSearch,
   SectionSelect,
 } from "../styles/GameSearchStyles";
 
@@ -67,12 +77,10 @@ const GameSearch = () => {
             <SectionItem value={3}>Multi player</SectionItem>
           </SectionSelect>
         </FormBox>
-        <TextField
-          id="filled-basic"
-          label="Filled"
-          variant="filled"
-          sx={{ marginLeft: "auto" }}
-        />
+        <SectionBox>
+          <SectionSearch placeholder="Search here.." disableUnderline />
+          <SectionIcon />
+        </SectionBox>
       </SectionGrid>
     </>
   );
