@@ -1,8 +1,9 @@
-import { FormControl, Grid, InputLabel, MenuItem, Select } from "@mui/material";
+import { Grid } from "@mui/material";
 import React, { useState } from "react";
 import {
   FormBox,
   SectionGrid,
+  SectionItem,
   SectionLabel,
   SectionSelect,
 } from "../styles/GameSearchStyles";
@@ -10,6 +11,7 @@ import {
 const GameSearch = () => {
   const [section, setSection] = useState("");
   const [genres, setGenres] = useState("");
+  const [support, setSupport] = useState("");
 
   const handleChange = (event) => {
     setSection(event.target.value);
@@ -18,33 +20,55 @@ const GameSearch = () => {
   const handleChangeTwo = (event) => {
     setGenres(event.target.value);
   };
+
+  const handleChangeThree = (event) => {
+    setSupport(event.target.value);
+  };
   return (
     <>
       <SectionGrid container>
-        <FormBox>
-          <SectionLabel>Section</SectionLabel>
-          <SectionSelect
-            value={section}
-            label="section"
-            onChange={handleChange}
-          >
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
-          </SectionSelect>
-        </FormBox>
-        <FormControl>
-          <SectionLabel>Genres</SectionLabel>
-          <SectionSelect
-            value={genres}
-            label="section"
-            onChange={handleChangeTwo}
-          >
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
-          </SectionSelect>
-        </FormControl>
+        <Grid container>
+          <FormBox>
+            <SectionLabel>Section</SectionLabel>
+            <SectionSelect
+              value={section}
+              label="section"
+              onChange={handleChange}
+            >
+              <SectionItem value={1}>Free to play</SectionItem>
+              <SectionItem value={2}>Demos</SectionItem>
+              <SectionItem value={3}>Early access</SectionItem>
+            </SectionSelect>
+          </FormBox>
+          <FormBox>
+            <SectionLabel>Genres</SectionLabel>
+            <SectionSelect
+              value={genres}
+              label="genres"
+              onChange={handleChangeTwo}
+            >
+              <SectionItem value={1}>Horror</SectionItem>
+              <SectionItem value={2}>Action</SectionItem>
+              <SectionItem value={3}>Sport</SectionItem>
+              <SectionItem value={4}>Adventure</SectionItem>
+              <SectionItem value={5}>Open world</SectionItem>
+              <SectionItem value={6}>Shooting</SectionItem>
+            </SectionSelect>
+          </FormBox>
+          <FormBox>
+            <SectionLabel>Support</SectionLabel>
+            <SectionSelect
+              value={support}
+              label="support"
+              onChange={handleChangeThree}
+            >
+              <SectionItem value={1}>LAN</SectionItem>
+              <SectionItem value={3}>Online</SectionItem>
+              <SectionItem value={2}>Single player</SectionItem>
+              <SectionItem value={3}>Multi player</SectionItem>
+            </SectionSelect>
+          </FormBox>
+        </Grid>
       </SectionGrid>
     </>
   );
