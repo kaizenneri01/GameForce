@@ -1,20 +1,28 @@
-import {
-  Button,
-  Card,
-  CardContent,
-  CardMedia,
-  Typography,
-} from "@mui/material";
+import { Button, CardMedia, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
+import {
+  CardVideo,
+  GameCard,
+  GameContent,
+} from "../styles/GameboxExtralargeStyles";
 
 const GameBoxExtraLarge = () => {
   return (
     <>
-      <Card sx={{ width: "30rem" }}>
-        <Box sx={{ display: "flex" }}>
-          <CardMedia component="img" alt="horizon" />
-          <CardContent>
+      <GameCard>
+        <Box sx={{ display: "flex", flexWrap: "wrap" }}>
+          <CardVideo
+            component="iframe"
+            image="https://www.youtube.com/embed/P9fK77eE7fs"
+          />
+          <GameContent
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              width: "20rem",
+            }}
+          >
             <Typography variant="h4">Title</Typography>
             <Typography variant="subtitle1">description</Typography>
             <Box sx={{ display: "flex" }}>
@@ -28,9 +36,9 @@ const GameBoxExtraLarge = () => {
               <Typography>price</Typography>
               <Button>add to cart</Button>
             </Box>
-          </CardContent>
+          </GameContent>
         </Box>
-      </Card>
+      </GameCard>
     </>
   );
 };
