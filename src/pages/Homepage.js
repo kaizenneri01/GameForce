@@ -21,8 +21,11 @@ import {
 import GameBoxLarge from "../components/GameBoxLarge";
 import GameBoxSmall from "../components/GameBoxSmall";
 import NavigationBar from "../components/NavigationBar";
+import { useNavigate } from "react-router-dom";
 
 const Homepage = () => {
+  let navigate = useNavigate();
+
   const settings = {
     dots: true,
     infinite: true,
@@ -104,7 +107,9 @@ const Homepage = () => {
           )}
         </Grid>
         <Grid container justifyContent="flex-end">
-          <SpecialTextTwo>see more</SpecialTextTwo>
+          <SpecialTextTwo onClick={() => navigate("/Games")}>
+            see more
+          </SpecialTextTwo>
           <SpecialArrow />
         </Grid>
       </Grid>

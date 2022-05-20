@@ -1,4 +1,3 @@
-import { CardMedia } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import {
@@ -7,6 +6,7 @@ import {
   GameButton,
   GameCard,
   GameContent,
+  GameMedia,
   GameTitle,
 } from "../styles/GameboxExtralargeStyles";
 import {
@@ -40,11 +40,10 @@ const GameBoxExtraLarge = ({ ...data }) => {
               <GameGenreText>Publisher</GameGenreText>
               <GameGenre>{data.publisher}</GameGenre>
             </Box>
-            <Box sx={{ display: "flex" }}>
+            <Box sx={{ display: "flex", marginTop: "1rem" }}>
               {data.minipictures?.map((minipics, index) => (
-                <CardMedia
+                <GameMedia
                   key={index}
-                  sx={{ height: "5rem", marginLeft: ".5rem", width: "8rem" }}
                   component="img"
                   src={minipics}
                   alt="minipic"

@@ -60,4 +60,18 @@ const CardPrice = styled(Button)(() => ({
   },
 }));
 
-export { CardPrice, GameButton, GameTitle, GameContent, CardVideo, GameCard };
+const GameMedia = styled(CardMedia)(() => ({
+  height: "5rem",
+  marginLeft: ".5rem",
+  width: "8rem",
+}));
+
+export {
+  GameMedia,
+  CardPrice,
+  GameButton,
+  GameTitle,
+  GameContent,
+  CardVideo,
+  GameCard,
+};
