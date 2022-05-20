@@ -1,21 +1,26 @@
-import { Button, CardMedia, Typography } from "@mui/material";
+import { CardMedia } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import {
+  CardPrice,
   CardVideo,
+  GameButton,
   GameCard,
   GameContent,
+  GameTitle,
 } from "../styles/GameboxExtralargeStyles";
+import {
+  GameDesc,
+  GameGenre,
+  GameGenreText,
+} from "../styles/GameBoxLargeStyles";
 
-const GameBoxExtraLarge = () => {
+const GameBoxExtraLarge = ({ ...data }) => {
   return (
     <>
       <GameCard>
-        <Box sx={{ display: "flex", flexWrap: "wrap" }}>
-          <CardVideo
-            component="iframe"
-            image="https://www.youtube.com/embed/P9fK77eE7fs"
-          />
+        <Box sx={{ display: "flex" }} elevation={10}>
+          <CardVideo component="iframe" image={data.image} />
           <GameContent
             sx={{
               display: "flex",
@@ -23,18 +28,39 @@ const GameBoxExtraLarge = () => {
               width: "20rem",
             }}
           >
-            <Typography variant="h4">Title</Typography>
-            <Typography variant="subtitle1">description</Typography>
+            <GameTitle variant="h4">{data.title}</GameTitle>
+            <GameDesc variant="subtitle1">{data.description}</GameDesc>
             <Box sx={{ display: "flex" }}>
-              <Typography>genres</Typography>
-              <Button>sample</Button>
-              <Button>sample</Button>
-              <Button>sample</Button>
+              <GameGenreText>genres:</GameGenreText>
+              {data.genre.map((genres, index) => (
+                <GameGenre key={index}>{genres}</GameGenre>
+              ))}
             </Box>
-            <CardMedia component="img" alt="minipic" />
             <Box sx={{ display: "flex" }}>
-              <Typography>price</Typography>
-              <Button>add to cart</Button>
+              <GameGenreText>Publisher</GameGenreText>
+              <GameGenre>{data.publisher}</GameGenre>
+            </Box>
+            <Box sx={{ display: "flex" }}>
+              {data.minipictures?.map((minipics, index) => (
+                <CardMedia
+                  key={index}
+                  sx={{ height: "5rem", marginLeft: ".5rem", width: "8rem" }}
+                  component="img"
+                  src={minipics}
+                  alt="minipic"
+                />
+              ))}
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "flex-end",
+                height: "100%",
+              }}
+            >
+              <CardPrice disableRipple>{data.cost}</CardPrice>
+              <GameButton>add to cart</GameButton>
             </Box>
           </GameContent>
         </Box>

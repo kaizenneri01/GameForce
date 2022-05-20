@@ -1,14 +1,17 @@
-import ImageOne from "../Asset/images/games/ResidentEvil8.jpg";
-import ImageTwo from "../Asset/images/games/Horizon.jpg";
-import ImageThree from "../Asset/images/games/Cyberpunk.jpg";
-import ImageFour from "../Asset/images/games/Borderlands3.jpg";
-import ImageFive from "../Asset/images/games/MonsterHunter.jpg";
-import GameOne from "../Asset/images/games/godofwar.jpg";
-import GameTwo from "../Asset/images/games/shadowoftomb.jpg";
-import GameThree from "../Asset/images/games/nba.jpg";
-import GameFour from "../Asset/images/games/reddead2.png";
-import GameFive from "../Asset/images/games/dyinglight2.jpg";
-import GameSix from "../Asset/images/games/eldenring.jpg";
+import {
+  ImageOne,
+  ImageTwo,
+  ImageThree,
+  ImageFour,
+  ImageFive,
+  GameOne,
+  GameTwo,
+  GameThree,
+  GameFour,
+  GameFive,
+} from "./ImageData";
+
+import { BattleOne, BattleTwo, BattleThree } from "./MulitipleImageData";
 
 export const GameData = [
   {
@@ -100,5 +103,79 @@ export const GameData = [
     genre: ["open world", "zombies", "co-op"],
     cost: "P 2,900.00",
     type: "featured",
+  },
+  {
+    image: "https://www.youtube.com/embed/P9fK77eE7fs",
+    title: "battlefield 4",
+    description:
+      "Battlefield 4 is a 2013 first-person shooter video game developed by DICE and published by Electronic Arts.",
+    publisher: " Electronic Arts",
+    minipictures: [BattleOne, BattleTwo, BattleThree],
+    genre: ["FPS", "single player", "action"],
+    cost: "P 1,500.25",
+    type: "best seller",
+  },
+  {
+    image: GameFive,
+    title: "",
+    description: "",
+    publisher: "",
+    genre: [],
+    cost: "",
+    type: "best seller",
+  },
+  {
+    image: GameFive,
+    title: "",
+    description: "",
+    publisher: "",
+    genre: [],
+    cost: "",
+    type: "best seller",
+  },
+  {
+    image: GameFive,
+    title: "",
+    description: "",
+    publisher: "",
+    genre: [],
+    cost: "",
+    type: "",
+  },
+  {
+    image: GameFive,
+    title: "",
+    description: "",
+    publisher: "",
+    genre: [],
+    cost: "",
+    type: "",
+  },
+  {
+    image: GameFive,
+    title: "",
+    description: "",
+    publisher: "",
+    genre: [],
+    cost: "",
+    type: "",
+  },
+  {
+    image: GameFive,
+    title: "",
+    description: "",
+    publisher: "",
+    genre: [],
+    cost: "",
+    type: "",
+  },
+  {
+    image: GameFive,
+    title: "",
+    description: "",
+    publisher: "",
+    genre: [],
+    cost: "",
+    type: "",
   },
 ];
