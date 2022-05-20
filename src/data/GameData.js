@@ -106,7 +106,7 @@ export const GameData = [
   },
   {
     image: "https://www.youtube.com/embed/P9fK77eE7fs",
-    title: "battlefield 4",
+    title: "Battlefield 4",
     description:
       "Battlefield 4 is a 2013 first-person shooter video game developed by DICE and published by Electronic Arts.",
     publisher: " Electronic Arts",
@@ -116,21 +116,25 @@ export const GameData = [
     type: "best seller",
   },
   {
-    image: GameFive,
-    title: "",
-    description: "",
-    publisher: "",
-    genre: [],
-    cost: "",
+    image: "https://www.youtube.com/embed/AKXiKBnzpBQ",
+    title: "Elden ring",
+    description:
+      "Elden Ring is an action role-playing game developed by FromSoftware and published by Bandai Namco Entertainment. The game was directed by Hidetaka Miyazaki and made in collaboration with fantasy novelist George R. R. Martin",
+    publisher: "Namco Bandai Games America Inc.",
+    minipictures: [BattleOne, BattleTwo, BattleThree],
+    genre: ["RPG", "online", "PVP", "Action"],
+    cost: "P 1,999.95",
     type: "best seller",
   },
   {
-    image: GameFive,
-    title: "",
-    description: "",
-    publisher: "",
-    genre: [],
-    cost: "",
+    image: "https://www.youtube.com/embed/kyBbYndoyTE",
+    title: "BACK 4 BLOOD",
+    description:
+      "Back 4 Blood is a 2021 first-person shooter game developed by Turtle Rock Studios and published by Warner Bros. Interactive Entertainment.",
+    publisher: " Warner Bros. Interactive Entertainment",
+    minipictures: [BattleOne, BattleTwo, BattleThree],
+    genre: ["zombie", "Online", "Co-op"],
+    cost: "P 2,500.00",
     type: "best seller",
   },
   {

@@ -3,7 +3,6 @@ import React from "react";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { GameData } from "../data/GameData";
 import Slider from "react-slick";
-
 import {
   CardTitle,
   HomeBox,

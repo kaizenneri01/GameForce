@@ -14,6 +14,8 @@ const GameCard = styled(Card)(() => ({
   height: "30rem",
   width: "60rem",
   backgroundColor: "#3A4750",
+  marginLeft: "auto",
+  marginRight: "auto",
 }));
 
 const CardVideo = styled(CardMedia)(() => ({
