@@ -1,5 +1,5 @@
 import { Container, Grid } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import GameBoxExtraLarge from "../components/GameBoxExtraLarge";
 import GameSearch from "../components/GameSearch";
 import NavigationBar from "../components/NavigationBar";
@@ -9,6 +9,10 @@ import TextStyle from "../styles/GameStyle";
 import GameBoxMedium from "../components/GameBoxMedium";
 
 const GamesPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const settingsTwo = {
     dots: true,
     infinite: true,
@@ -37,9 +41,6 @@ const GamesPage = () => {
       </Grid>
       <TextStyle>BEST SELLER</TextStyle>
       <Grid container justifyContent="center">
-        <GameBoxMedium />
-        <GameBoxMedium />
-        <GameBoxMedium />
         <GameBoxMedium />
       </Grid>
     </Grid>

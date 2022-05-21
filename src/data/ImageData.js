@@ -8,8 +8,10 @@ import GameTwo from "../Asset/images/games/shadowoftomb.jpg";
 import GameThree from "../Asset/images/games/nba.jpg";
 import GameFour from "../Asset/images/games/reddead2.png";
 import GameFive from "../Asset/images/games/dyinglight2.jpg";
+import GameSix from "../Asset/images/games/res4.jpg";
 
 export {
+  GameSix,
   GameFive,
   GameFour,
   GameThree,
