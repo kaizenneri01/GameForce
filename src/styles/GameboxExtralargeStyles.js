@@ -34,6 +34,7 @@ const GameTitle = styled(Typography)(() => ({
   color: "#EEEEEE",
   fontSize: "2rem",
   fontWeight: "bolder",
+  marginBottom: "5px",
 }));
 
 const GameButton = styled(Button)(() => ({
