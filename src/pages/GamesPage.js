@@ -1,12 +1,13 @@
-import { Container, Grid } from "@mui/material";
+import { Container, Grid, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 import GameBoxExtraLarge from "../components/GameBoxExtraLarge";
 import GameSearch from "../components/GameSearch";
 import NavigationBar from "../components/NavigationBar";
 import { GameData } from "../data/GameData";
 import Slider from "react-slick";
-import TextStyle from "../styles/GameStyle";
+import { TextStyle, TextStyleTwo } from "../styles/GameStyle";
 import GameBoxMedium from "../components/GameBoxMedium";
+import { SpecialArrow } from "../styles/HomeStyle";
 
 const GamesPage = () => {
   useEffect(() => {
@@ -14,7 +15,7 @@ const GamesPage = () => {
   }, []);
 
   const settingsTwo = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -29,7 +30,7 @@ const GamesPage = () => {
       <Grid container direction="row" justifyContent="center">
         <Container maxWidth={false}>
           <Slider {...settingsTwo}>
-            {GameData.filter((list) => list.type === "best seller").map(
+            {GameData.filter((list) => list.type === "new release").map(
               (data, index) => (
                 <Grid container>
                   <GameBoxExtraLarge key={index} {...data} />
@@ -39,9 +40,68 @@ const GamesPage = () => {
           </Slider>
         </Container>
       </Grid>
-      <TextStyle>BEST SELLER</TextStyle>
-      <Grid container justifyContent="center">
-        <GameBoxMedium />
+      <Grid container item xs={6}>
+        <TextStyle>BEST SELLER</TextStyle>
+      </Grid>
+      <Grid
+        container
+        item
+        justifyContent="flex-end"
+        alignItems="center"
+        xs={6}
+        sx={{ paddingRight: "2rem" }}
+      >
+        <TextStyleTwo>SEE MORE</TextStyleTwo>
+        <SpecialArrow />
+      </Grid>
+      <Grid container justifyContent="center" sx={{ paddingBottom: "5rem" }}>
+        {GameData.filter((list) => list.type === "best seller").map(
+          (data, index) => (
+            <GameBoxMedium key={index} {...data} />
+          )
+        )}
+      </Grid>
+      <Grid container item xs={6}>
+        <TextStyle>BEST SELLER</TextStyle>
+      </Grid>
+      <Grid
+        container
+        item
+        justifyContent="flex-end"
+        alignItems="center"
+        xs={6}
+        sx={{ paddingRight: "2rem" }}
+      >
+        <TextStyleTwo>SEE MORE</TextStyleTwo>
+        <SpecialArrow />
+      </Grid>
+      <Grid container justifyContent="center" sx={{ paddingBottom: "5rem" }}>
+        {GameData.filter((list) => list.type === "best seller").map(
+          (data, index) => (
+            <GameBoxMedium key={index} {...data} />
+          )
+        )}
+      </Grid>
+      <Grid container item xs={6}>
+        <TextStyle>BEST SELLER</TextStyle>
+      </Grid>
+      <Grid
+        container
+        item
+        justifyContent="flex-end"
+        alignItems="center"
+        xs={6}
+        sx={{ paddingRight: "2rem" }}
+      >
+        <TextStyleTwo>SEE MORE</TextStyleTwo>
+        <SpecialArrow />
+      </Grid>
+      <Grid container justifyContent="center" sx={{ paddingBottom: "5rem" }}>
+        {GameData.filter((list) => list.type === "best seller").map(
+          (data, index) => (
+            <GameBoxMedium key={index} {...data} />
+          )
+        )}
       </Grid>
     </Grid>
   );

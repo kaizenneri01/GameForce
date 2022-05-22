@@ -16,6 +16,7 @@ const GameCard = styled(Card)(() => ({
   backgroundColor: "#3A4750",
   marginLeft: "auto",
   marginRight: "auto",
+  marginBottom: "5rem",
 }));
 
 const CardVideo = styled(CardMedia)(() => ({
@@ -62,7 +63,7 @@ const CardPrice = styled(Button)(() => ({
 }));
 
 const GameMedia = styled(CardMedia)(() => ({
-  height: "5rem",
+  height: "6rem",
   marginLeft: ".5rem",
   width: "8rem",
 }));

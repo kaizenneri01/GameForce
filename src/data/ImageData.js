@@ -9,8 +9,14 @@ import GameThree from "../Asset/images/games/nba.jpg";
 import GameFour from "../Asset/images/games/reddead2.png";
 import GameFive from "../Asset/images/games/dyinglight2.jpg";
 import GameSix from "../Asset/images/games/res4.jpg";
+import GameSeven from "../Asset/images/games/tomb.jpg";
+import GameEight from "../Asset/images/games/w3.jpg";
+import GameNine from "../Asset/images/games/bat.jpg";
 
 export {
+  GameNine,
+  GameEight,
+  GameSeven,
   GameSix,
   GameFive,
   GameFour,

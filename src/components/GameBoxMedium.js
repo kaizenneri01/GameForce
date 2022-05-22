@@ -8,9 +8,8 @@ import {
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import { GameSix } from "../data/ImageData";
 
-const GameBoxMedium = () => {
+const GameBoxMedium = ({ ...data }) => {
   return (
     <>
       <Card
@@ -19,14 +18,18 @@ const GameBoxMedium = () => {
           height: "25rem",
           margin: "1rem",
           borderRadius: "1rem",
-          backgroundColor: "black",
+          backgroundColor: "#232222",
+          transition: "all .2s",
+          "&:hover": {
+            transform: "translate(1px , 1px) scale(1.05)",
+          },
         }}
       >
         <CardMedia
           component="img"
-          src={GameSix}
+          src={data.image}
           alt="games"
-          sx={{ width: "100%", height: "70%", objectFit: "fill" }}
+          sx={{ width: "100%", height: "70%" }}
         />
         <CardContent sx={{ backgroundColor: "#3A4750", height: "30%" }}>
           <Typography
@@ -36,7 +39,7 @@ const GameBoxMedium = () => {
               fontWeight: "normal",
             }}
           >
-            Resident evil 4
+            {data.title}
           </Typography>
           <Grid container>
             <Grid container item xs={6}>
@@ -57,7 +60,7 @@ const GameBoxMedium = () => {
                     fontWeight: "bold",
                   }}
                 >
-                  -25%
+                  {data.discount}
                 </Typography>
               </Box>
             </Grid>
@@ -81,7 +84,7 @@ const GameBoxMedium = () => {
                       textDecoration: "line-through",
                     }}
                   >
-                    P 500.00
+                    {data.cost}
                   </Typography>
                   <Typography
                     sx={{
@@ -90,7 +93,7 @@ const GameBoxMedium = () => {
                       color: "#EEEEEE",
                     }}
                   >
-                    P 450.00
+                    {data.discountPrice}
                   </Typography>
                 </Grid>
               </Button>
