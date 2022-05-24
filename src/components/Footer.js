@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -54,6 +54,8 @@ const Footer = () => {
                   fontWeight: "Bolder",
                   color: "#EEEEEE",
                   textAlign: "center",
+                  overflowWrap: "break-word",
+                  inlineSize: "9.8rem",
                 }}
               >
                 Info.Support.Services.Term of Use.Privacy
@@ -61,7 +63,12 @@ const Footer = () => {
             </Grid>
             <Grid item xs={12}>
               <Typography
-                sx={{ fontSize: ".7rem", fontWeight: "light", color: "gray" }}
+                sx={{
+                  fontSize: ".7rem",
+                  fontWeight: "light",
+                  color: "gray",
+                  marginTop: "1rem",
+                }}
               >
                 2022 game force
               </Typography>
