@@ -1,4 +1,4 @@
-import { CardActions, Grid } from "@mui/material";
+import { Button, CardActions, Grid } from "@mui/material";
 import React from "react";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { GameData } from "../data/GameData";
@@ -22,6 +22,7 @@ import GameBoxLarge from "../components/GameBoxLarge";
 import GameBoxSmall from "../components/GameBoxSmall";
 import NavigationBar from "../components/NavigationBar";
 import { useNavigate } from "react-router-dom";
+import { Box } from "@mui/system";
 
 const Homepage = () => {
   let navigate = useNavigate();
@@ -73,6 +74,28 @@ const Homepage = () => {
                       <HeartButton />
                     </Grid>
                   </HomeCard>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignSelf: "flex-end",
+                      padding: "2rem",
+                    }}
+                  >
+                    <Button
+                      sx={{
+                        backgroundColor: "#232222",
+                        fontSize: "1.5rem",
+                        width: "10rem",
+                        color: "#EEEEEE",
+                        "&:hover": {
+                          backgroundColor: "#232222",
+                        },
+                      }}
+                      disableRipple
+                    >
+                      {landingInfo.cost}
+                    </Button>
+                  </Box>
                 </HomeBox>
               </Grid>
             )

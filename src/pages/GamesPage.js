@@ -1,4 +1,4 @@
-import { Container, Grid, Typography } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import React, { useEffect } from "react";
 import GameBoxExtraLarge from "../components/GameBoxExtraLarge";
 import GameSearch from "../components/GameSearch";
@@ -24,6 +24,36 @@ const GamesPage = () => {
     slidesToScroll: 1,
   };
 
+  const SampleComponent = ({ name, container, data, component }) => {
+    return (
+      <div>
+        {container === "extra" ? (
+          <Slider {...settingsTwo}>
+            {data
+              .filter((list) => list.type === name)
+              .map((data, index) => (
+                <Grid container>
+                  <GameBoxExtraLarge key={index} {...data} />
+                </Grid>
+              ))}
+          </Slider>
+        ) : (
+          <Grid
+            container
+            justifyContent="center"
+            sx={{ paddingBottom: "5rem" }}
+          >
+            {data
+              .filter((list) => list.type === name)
+              .map((data, index) => (
+                <div>{component(index, data)}</div>
+              ))}
+          </Grid>
+        )}
+      </div>
+    );
+  };
+
   return (
     <Grid container sx={{ height: "100%", backgroundColor: "#303841" }}>
       <NavigationBar />
@@ -31,15 +61,11 @@ const GamesPage = () => {
       <TextStyle>NEW RELEASE</TextStyle>
       <Grid container direction="row" justifyContent="center">
         <Container maxWidth={false}>
-          <Slider {...settingsTwo}>
-            {GameData.filter((list) => list.type === "new release").map(
-              (data, index) => (
-                <Grid container>
-                  <GameBoxExtraLarge key={index} {...data} />
-                </Grid>
-              )
-            )}
-          </Slider>
+          {SampleComponent({
+            name: "new release",
+            container: "extra",
+            data: GameData,
+          })}
         </Container>
       </Grid>
       <Grid container item xs={6}>
@@ -56,13 +82,15 @@ const GamesPage = () => {
         <TextStyleTwo>SEE MORE</TextStyleTwo>
         <SpecialArrow />
       </Grid>
-      <Grid container justifyContent="center" sx={{ paddingBottom: "5rem" }}>
-        {GameData.filter((list) => list.type === "best seller").map(
-          (data, index) => (
-            <GameBoxMedium key={index} {...data} />
-          )
-        )}
+      <Grid container justifyContent="center">
+        {SampleComponent({
+          name: "best seller",
+          container: "",
+          data: GameData,
+          component: (index, data) => <GameBoxMedium key={index} {...data} />,
+        })}
       </Grid>
+
       <Grid container item xs={6}>
         <TextStyle>BEST SELLER</TextStyle>
       </Grid>
@@ -77,12 +105,15 @@ const GamesPage = () => {
         <TextStyleTwo>SEE MORE</TextStyleTwo>
         <SpecialArrow />
       </Grid>
-      <Grid container justifyContent="center" sx={{ paddingBottom: "5rem" }}>
-        {GameData.filter((list) => list.type === "best seller").map(
-          (data, index) => (
+      <Grid container justifyContent="center">
+        {SampleComponent({
+          name: "best seller",
+          container: "",
+          data: GameData,
+          component: (index, data) => (
             <GameBoxMediumTwo key={index} {...data} />
-          )
-        )}
+          ),
+        })}
       </Grid>
       <Grid container item xs={6}>
         <TextStyle>POPULAR</TextStyle>
@@ -98,12 +129,13 @@ const GamesPage = () => {
         <TextStyleTwo>SEE MORE</TextStyleTwo>
         <SpecialArrow />
       </Grid>
-      <Grid container justifyContent="center" sx={{ paddingBottom: "5rem" }}>
-        {GameData.filter((list) => list.type === "best seller").map(
-          (data, index) => (
-            <GameBoxMediumTwo key={index} {...data} />
-          )
-        )}
+      <Grid container justifyContent="center">
+        {SampleComponent({
+          name: "best seller",
+          container: "",
+          data: GameData,
+          component: (index, data) => <GameBoxMedium key={index} {...data} />,
+        })}
       </Grid>
       <Footer />
     </Grid>

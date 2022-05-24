@@ -32,6 +32,7 @@ export const GameData = [
     description:
       "xplore distant lands, fight bigger and more awe-inspiring machines, and encounter astonishing new tribes as you return to the far-future, post-apocalyptic world of Horizon. ",
     genres: ["action", "adventure", "Single player"],
+    cost: "P 1,995.55",
     type: "landing",
   },
   {
@@ -40,6 +41,7 @@ export const GameData = [
     description:
       "Cyberpunk 2077 is an open-world, action-adventure RPG set in the megalopolis of Night City, where you play as a cyberpunk mercenary wrapped up in a do-or-die fight for survival. ",
     genres: ["action", "open world", "adventure"],
+    cost: "P 1,500.00",
     type: "landing",
   },
   {
@@ -48,6 +50,7 @@ export const GameData = [
     description:
       " By Hirun Cryer published December 02, 2020. The game's 120Hz mode is also put to the test. (Image credit: Gearbox) Borderlands 3 has received the next-gen comparison treatment",
     genres: ["shooting", "action", "co-op"],
+    cost: "P 1,200.50",
     type: "landing",
   },
   {
@@ -56,6 +59,7 @@ export const GameData = [
     description:
       " Welcome to a new world! Take on the role of a hunter and slay ferocious monsters in a living, breathing ecosystem where you can use the landscape and its diverse inhabitants to get the upper hand.",
     genres: ["adventure", "role-play", "Multiplayer"],
+    cost: "P 2,100.25",
     type: "landing",
   },
   {
