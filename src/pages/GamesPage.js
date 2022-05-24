@@ -8,6 +8,8 @@ import Slider from "react-slick";
 import { TextStyle, TextStyleTwo } from "../styles/GameStyle";
 import GameBoxMedium from "../components/GameBoxMedium";
 import { SpecialArrow } from "../styles/HomeStyle";
+import GameBoxMediumTwo from "../components/GameBoxMediumTwo";
+import Footer from "../components/Footer";
 
 const GamesPage = () => {
   useEffect(() => {
@@ -41,7 +43,7 @@ const GamesPage = () => {
         </Container>
       </Grid>
       <Grid container item xs={6}>
-        <TextStyle>BEST SELLER</TextStyle>
+        <TextStyle>SALE EVENT</TextStyle>
       </Grid>
       <Grid
         container
@@ -78,12 +80,12 @@ const GamesPage = () => {
       <Grid container justifyContent="center" sx={{ paddingBottom: "5rem" }}>
         {GameData.filter((list) => list.type === "best seller").map(
           (data, index) => (
-            <GameBoxMedium key={index} {...data} />
+            <GameBoxMediumTwo key={index} {...data} />
           )
         )}
       </Grid>
       <Grid container item xs={6}>
-        <TextStyle>BEST SELLER</TextStyle>
+        <TextStyle>POPULAR</TextStyle>
       </Grid>
       <Grid
         container
@@ -99,10 +101,11 @@ const GamesPage = () => {
       <Grid container justifyContent="center" sx={{ paddingBottom: "5rem" }}>
         {GameData.filter((list) => list.type === "best seller").map(
           (data, index) => (
-            <GameBoxMedium key={index} {...data} />
+            <GameBoxMediumTwo key={index} {...data} />
           )
         )}
       </Grid>
+      <Footer />
     </Grid>
   );
 };
