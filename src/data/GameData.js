@@ -37,7 +37,7 @@ export const GameData = [
   },
   {
     image: ImageThree,
-    title: "Cyber puunk 2077",
+    title: "Cyber punk 2077",
     description:
       "Cyberpunk 2077 is an open-world, action-adventure RPG set in the megalopolis of Night City, where you play as a cyberpunk mercenary wrapped up in a do-or-die fight for survival. ",
     genres: ["action", "open world", "adventure"],

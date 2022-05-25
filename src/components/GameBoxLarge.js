@@ -13,7 +13,7 @@ const GameBoxLarge = ({ ...games }) => {
   return (
     <GameCard elevation={5}>
       <GameImage component="img" src={games.image} alt={games.title} />
-      <CardContent sx={{ height: "28%" }}>
+      <CardContent sx={{ height: "30%" }}>
         <Grid container>
           <GameTitle variant="h6">{games.title}</GameTitle>
           <GameDesc>{games.description}</GameDesc>
@@ -30,7 +30,7 @@ const GameBoxLarge = ({ ...games }) => {
           sx={{
             backgroundColor: "#232222",
             fontSize: "1rem",
-            margin: "0 .5rem 0 1rem",
+            margin: "0 1rem 0 1rem",
             color: "#EEEEEE",
             "&:hover": {
               backgroundColor: "#232222",
@@ -38,7 +38,7 @@ const GameBoxLarge = ({ ...games }) => {
           }}
           disableRipple
         >
-          P 1,400.45
+          {games.cost}
         </Button>
       </Grid>
     </GameCard>

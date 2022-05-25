@@ -1,6 +1,5 @@
 import { Container, Grid } from "@mui/material";
 import React, { useEffect } from "react";
-import GameBoxExtraLarge from "../components/GameBoxExtraLarge";
 import GameSearch from "../components/GameSearch";
 import NavigationBar from "../components/NavigationBar";
 import { GameData } from "../data/GameData";
@@ -10,8 +9,12 @@ import GameBoxMedium from "../components/GameBoxMedium";
 import { SpecialArrow } from "../styles/HomeStyle";
 import GameBoxMediumTwo from "../components/GameBoxMediumTwo";
 import Footer from "../components/Footer";
+import { useNavigate } from "react-router-dom";
+import GameComponent from "../components/GameComponent";
 
 const GamesPage = () => {
+  let navigate = useNavigate();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -23,37 +26,6 @@ const GamesPage = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
-
-  const SampleComponent = ({ name, container, data, component }) => {
-    return (
-      <div>
-        {container === "extra" ? (
-          <Slider {...settingsTwo}>
-            {data
-              .filter((list) => list.type === name)
-              .map((data, index) => (
-                <Grid container>
-                  <GameBoxExtraLarge key={index} {...data} />
-                </Grid>
-              ))}
-          </Slider>
-        ) : (
-          <Grid
-            container
-            justifyContent="center"
-            sx={{ paddingBottom: "5rem" }}
-          >
-            {data
-              .filter((list) => list.type === name)
-              .map((data, index) => (
-                <div>{component(index, data)}</div>
-              ))}
-          </Grid>
-        )}
-      </div>
-    );
-  };
-
   return (
     <Grid container sx={{ height: "100%", backgroundColor: "#303841" }}>
       <NavigationBar />
@@ -61,10 +33,13 @@ const GamesPage = () => {
       <TextStyle>NEW RELEASE</TextStyle>
       <Grid container direction="row" justifyContent="center">
         <Container maxWidth={false}>
-          {SampleComponent({
+          {GameComponent({
             name: "new release",
             container: "extra",
             data: GameData,
+            Settings: ({ children }) => (
+              <Slider {...settingsTwo}>{children}</Slider>
+            ),
           })}
         </Container>
       </Grid>
@@ -79,11 +54,13 @@ const GamesPage = () => {
         xs={6}
         sx={{ paddingRight: "2rem" }}
       >
-        <TextStyleTwo>SEE MORE</TextStyleTwo>
+        <TextStyleTwo onClick={() => navigate("/Games/SaleEvent")}>
+          SEE MORE
+        </TextStyleTwo>
         <SpecialArrow />
       </Grid>
       <Grid container justifyContent="center">
-        {SampleComponent({
+        {GameComponent({
           name: "best seller",
           container: "",
           data: GameData,
@@ -106,7 +83,7 @@ const GamesPage = () => {
         <SpecialArrow />
       </Grid>
       <Grid container justifyContent="center">
-        {SampleComponent({
+        {GameComponent({
           name: "best seller",
           container: "",
           data: GameData,
@@ -130,7 +107,7 @@ const GamesPage = () => {
         <SpecialArrow />
       </Grid>
       <Grid container justifyContent="center">
-        {SampleComponent({
+        {GameComponent({
           name: "best seller",
           container: "",
           data: GameData,

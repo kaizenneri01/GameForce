@@ -2,8 +2,8 @@ import { Button, Card, CardMedia, Typography } from "@mui/material";
 import styled from "@emotion/styled";
 
 const GameCard = styled(Card)(() => ({
-  height: "45rem",
-  width: "25rem",
+  height: "35rem",
+  width: "22rem",
   backgroundColor: "#3A4750",
   margin: "5rem 1rem 1rem 1rem",
   borderRadius: "1rem",
@@ -15,7 +15,7 @@ const GameCard = styled(Card)(() => ({
 }));
 
 const GameImage = styled(CardMedia)(() => ({
-  height: "60%",
+  height: "55%",
   width: "100%",
   objectFit: "fill",
 }));

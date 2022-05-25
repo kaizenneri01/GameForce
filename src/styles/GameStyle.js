@@ -6,6 +6,7 @@ const TextStyle = styled(Typography)(() => ({
   fontSize: "2rem",
   margin: "1rem 2rem",
   borderBottom: "4px #D72323 solid",
+  fontWeight: "bolder",
 }));
 
 const TextStyleTwo = styled(Typography)(() => ({
