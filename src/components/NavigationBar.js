@@ -30,7 +30,11 @@ const NavigationBar = () => {
             >
               games
             </NavButton>
-            <NavButton variant="text" disableRipple>
+            <NavButton
+              variant="text"
+              disableRipple
+              onClick={() => navigate("/About")}
+            >
               about
             </NavButton>
           </Grid>

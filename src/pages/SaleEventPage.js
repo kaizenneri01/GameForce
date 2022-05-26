@@ -17,7 +17,7 @@ const SaleEventPage = () => {
         <TextStyle>SALE EVENT</TextStyle>
         <Grid container>
           {GameComponent({
-            name: "best seller",
+            name: "featured",
             data: GameData,
             component: (index, data) => <GameBoxLarge key={index} {...data} />,
           })}
