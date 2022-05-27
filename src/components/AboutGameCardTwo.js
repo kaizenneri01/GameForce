@@ -1,24 +1,23 @@
-import { Box, CardContent, Grid } from "@mui/material";
+import { Box, CardContent } from "@mui/material";
 import React, { useState } from "react";
 import picTwo from "../Asset/images/games/gf.png";
 import { GameData } from "../data/GameData";
 import {
   AboutBox,
   AboutContainer,
+  AboutContainerTwo,
   AboutDesc,
+  AboutDescTwo,
   AboutPic,
   AboutTitle,
 } from "../styles/AboutStyle";
 
-const AboutGameCard = () => {
-  const [data] = useState(GameData[20]);
+const AboutGameCardTwo = () => {
+  const [data] = useState(GameData[21]);
 
   return (
     <>
-      <Grid container justifyContent>
-        <AboutPic component="img" src={picTwo} alt="destiny2" />
-      </Grid>
-      <AboutContainer picture={data.image}>
+      <AboutContainerTwo picture={data.image}>
         <AboutBox>
           <CardContent>
             <Box
@@ -30,13 +29,13 @@ const AboutGameCard = () => {
             >
               <AboutTitle>{data.title}</AboutTitle>
 
-              <AboutDesc>{data.description}</AboutDesc>
+              <AboutDescTwo>{data.description}</AboutDescTwo>
             </Box>
           </CardContent>
         </AboutBox>
-      </AboutContainer>
+      </AboutContainerTwo>
     </>
   );
 };
 
-export default AboutGameCard;
+export default AboutGameCardTwo;

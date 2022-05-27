@@ -1,19 +1,19 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import AboutGameCard from "../components/AboutGameCard";
-import GameComponent from "../components/GameComponent";
+import AboutGameCardTwo from "../components/AboutGameCardTwo";
 import NavigationBar from "../components/NavigationBar";
-import { GameData } from "../data/GameData";
 
 const AboutPage = () => {
   return (
     <>
       <NavigationBar />
-      {GameComponent({
-        name: "aboutpage",
-        data: GameData,
-        component: (index, data) => <AboutGameCard key={index} {...data} />,
-      })}
+      <Grid container sx={{ backgroundColor: "#303841" }}>
+        <AboutGameCard />
+      </Grid>
+      <Grid container sx={{ backgroundColor: "#232222" }}>
+        <AboutGameCardTwo />
+      </Grid>
     </>
   );
 };
