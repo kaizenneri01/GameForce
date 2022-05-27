@@ -15,7 +15,7 @@ const AboutGameCard = () => {
 
   return (
     <>
-      <Grid container justifyContent>
+      <Grid container justifyContent="center">
         <AboutPic component="img" src={picTwo} alt="destiny2" />
       </Grid>
       <AboutContainer picture={data.image}>

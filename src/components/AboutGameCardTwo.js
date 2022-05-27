@@ -1,14 +1,10 @@
 import { Box, CardContent } from "@mui/material";
 import React, { useState } from "react";
-import picTwo from "../Asset/images/games/gf.png";
 import { GameData } from "../data/GameData";
 import {
   AboutBox,
-  AboutContainer,
   AboutContainerTwo,
-  AboutDesc,
   AboutDescTwo,
-  AboutPic,
   AboutTitle,
 } from "../styles/AboutStyle";
 

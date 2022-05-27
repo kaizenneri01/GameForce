@@ -1,6 +1,6 @@
 import { Box } from "@mui/system";
 import styled from "@emotion/styled";
-import { CardMedia, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 
 const AboutContainer = styled(Box)(({ picture }) => ({
   borderRadius: "2rem",
