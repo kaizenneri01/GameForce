@@ -1,17 +1,19 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import AboutGameCard from "../components/AboutGameCard";
-import GameSearch from "../components/GameSearch";
+import GameComponent from "../components/GameComponent";
 import NavigationBar from "../components/NavigationBar";
+import { GameData } from "../data/GameData";
 
 const AboutPage = () => {
   return (
     <>
       <NavigationBar />
-      <GameSearch />
-      <Grid container>
-        <AboutGameCard />
-      </Grid>
+      {GameComponent({
+        name: "aboutpage",
+        data: GameData,
+        component: (index, data) => <AboutGameCard key={index} {...data} />,
+      })}
     </>
   );
 };

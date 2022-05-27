@@ -9,10 +9,11 @@ import {
 
 import React from "react";
 
-const GameBoxMediumTwo = ({ ...data }) => {
+const GameBoxMediumTwo = ({ ...data }, index) => {
   return (
     <>
       <Card
+        key={index}
         sx={{
           width: "18rem",
           height: "25rem",

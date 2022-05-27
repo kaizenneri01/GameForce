@@ -13,6 +13,8 @@ import {
   GameSeven,
   GameEight,
   GameNine,
+  AboutPic,
+  AboutPicTwo,
 } from "./ImageData";
 
 import { BattleOne, BattleTwo, BattleThree } from "./MulitipleImageData";
@@ -223,5 +225,27 @@ export const GameData = [
     genre: [],
     cost: "",
     type: "",
+  },
+  {
+    bgColor: "#303841",
+    image: AboutPic,
+    title: "about our Services",
+    description: `In the fast changing globalized and a technology-driven business
+    world, Retail industry over last few decades has witnessed a sea
+    change. World’s largest retail giant of the present times
+    Walmart is operating worldwide by establishing hypermarkets in
+    various countries by taking the help of sophisticated means of
+    communication as well as information systems technology.`,
+    type: "aboutpage",
+  },
+  {
+    bgColor: "#2322221",
+    image: AboutPicTwo,
+    title: "about community",
+    description: `In the broadest sense, a gaming community is an online community
+     that is centered on interaction through game. A computer game, in this context, 
+     will mean something that one uses primarily as for a hobby, a diversion from 
+     real life, and is a medium through which one plays.`,
+    type: "aboutpage",
   },
 ];
