@@ -111,7 +111,9 @@ const GamesPage = () => {
           name: "best seller",
           container: "",
           data: GameData,
-          component: (index, data) => <GameBoxMedium key={index} {...data} />,
+          component: (index, data) => (
+            <GameBoxMediumTwo key={index} {...data} />
+          ),
         })}
       </Grid>
       <Footer />

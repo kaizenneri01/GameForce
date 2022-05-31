@@ -14,8 +14,10 @@ import GameEight from "../Asset/images/games/w3.jpg";
 import GameNine from "../Asset/images/games/bat.jpg";
 import AboutPic from "../Asset/images/games/destiny2.jpg";
 import AboutPicTwo from "../Asset/images/games/mh.jpg";
+import AboutPicThree from "../Asset/images/games/apex.jpg";
 
 export {
+  AboutPicThree,
   AboutPicTwo,
   AboutPic,
   GameNine,

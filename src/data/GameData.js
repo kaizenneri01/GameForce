@@ -227,7 +227,6 @@ export const GameData = [
     type: "",
   },
   {
-    bgColor: "#303841",
     image: AboutPic,
     title: "about our Services",
     description: `In the fast changing globalized and a technology-driven business
@@ -239,7 +238,6 @@ export const GameData = [
     type: "aboutpage",
   },
   {
-    bgColor: "#2322221",
     image: AboutPicTwo,
     title: "about community",
     description: `In the broadest sense, a gaming community is an online community

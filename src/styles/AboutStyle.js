@@ -6,7 +6,7 @@ const AboutContainer = styled(Box)(({ picture }) => ({
   borderRadius: "2rem",
   marginLeft: "auto",
   marginRight: "auto",
-  marginBottom: "2rem",
+  marginBottom: "5rem",
   marginTop: "5rem",
   height: "90vh",
   width: "80vw",
@@ -23,7 +23,7 @@ const AboutContainerTwo = styled(Box)(({ picture }) => ({
   borderRadius: "2rem",
   marginLeft: "auto",
   marginRight: "auto",
-  marginBottom: "2rem",
+  marginBottom: "5rem",
   marginTop: "5rem",
   height: "90vh",
   width: "80vw",
@@ -32,6 +32,21 @@ const AboutContainerTwo = styled(Box)(({ picture }) => ({
   backgroundPosition: "center",
   backgroundImage: ` linear-gradient(260deg, #232222 35%, transparent),
   url(${picture})`,
+}));
+
+const AboutContainerThree = styled(Box)(({ picture }) => ({
+  borderRadius: "2rem",
+  marginLeft: "auto",
+  marginRight: "auto",
+  marginBottom: "5rem",
+  marginTop: "5rem",
+  height: "90vh",
+  width: "80vw",
+  backgroundSize: "cover",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center",
+  backgroundImage: ` linear-gradient(80deg, #303841 45%, transparent),
+url(${picture})`,
 }));
 
 const AboutBox = styled(Box)(() => ({
@@ -43,23 +58,43 @@ const AboutBox = styled(Box)(() => ({
   alignItems: "center",
 }));
 
+const AboutBoxTwo = styled(Box)(() => ({
+  height: "100%",
+  width: "50%",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+}));
+
 const AboutPic = styled(Box)(() => ({
   backgroundColor: "transparent",
   height: "25vh",
   width: "25vw",
   objectFit: "fill",
-  margin: "2rem 4rem 2rem 0",
+  margin: "2rem 4rem 0 0",
 }));
 
 const AboutTitle = styled(Typography)(() => ({
   color: "#EEEEEE",
   fontSize: "8vh",
   textTransform: "capitalize",
-  borderBottom: "#D72323 solid 3px",
+  borderBottom: "#D72323 solid 5px",
   fontWeight: "bolder",
   marginBottom: "3rem",
   textAlign: "center",
   width: "20vw",
+}));
+
+const AboutTitleThree = styled(Typography)(() => ({
+  color: "#EEEEEE",
+  fontSize: "6vh",
+  textTransform: "capitalize",
+  borderBottom: "#D72323 solid 5px",
+  fontWeight: "bolder",
+  marginBottom: "3rem",
+  textAlign: "center",
+  width: "18vw",
 }));
 
 const AboutDesc = styled(Typography)(() => ({
@@ -84,8 +119,11 @@ export {
   AboutDesc,
   AboutDescTwo,
   AboutTitle,
+  AboutTitleThree,
   AboutBox,
+  AboutBoxTwo,
   AboutContainer,
   AboutContainerTwo,
+  AboutContainerThree,
   AboutPic,
 };
