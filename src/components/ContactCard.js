@@ -1,14 +1,12 @@
-import { Box, CardContent, Grid, TextField } from "@mui/material";
+import { Box, CardContent, Grid } from "@mui/material";
 import React from "react";
 import { AboutPicThree } from "../data/ImageData";
 import {
-  AboutBox,
   AboutBoxTwo,
   AboutContainerThree,
-  AboutDesc,
   AboutTitleThree,
-  ContactText,
 } from "../styles/AboutStyle";
+import { ContactInput, ContactInputTwo } from "../styles/ContactStyles";
 
 const ContactCard = () => {
   return (
@@ -26,39 +24,110 @@ const ContactCard = () => {
               <AboutTitleThree>CONTACT US</AboutTitleThree>
               <Box component="form">
                 <Grid container item>
-                  <TextField
+                  <ContactInput
                     label="First name"
                     size="normal"
-                    sx={{ width: "12vw", margin: "1rem" }}
+                    placeholder="First name"
+                    inputProps={{
+                      style: {
+                        color: "#949494",
+                        fontWeight: "bold",
+                      },
+                    }}
+                    InputLabelProps={{
+                      shrink: true,
+                      style: {
+                        top: "-15%",
+                        color: "#b3b3b3",
+                        fontWeight: "bolder",
+                        fontSize: "1.1rem",
+                      },
+                    }}
                   />
-                  <TextField
+                  <ContactInput
                     label="Last name"
+                    placeholder="Last name"
                     size="normal"
-                    sx={{ width: "12vw", margin: "1rem" }}
+                    inputProps={{
+                      style: {
+                        color: "#949494",
+                        fontWeight: "bold",
+                      },
+                    }}
+                    InputLabelProps={{
+                      shrink: true,
+                      style: {
+                        top: "-15%",
+                        color: "#b3b3b3",
+                        fontWeight: "bolder",
+                        fontSize: "1.1rem",
+                      },
+                    }}
                   />
                 </Grid>
                 <Grid container item flexDirection="column">
-                  <TextField
-                    label="Email Address"
+                  <ContactInputTwo
+                    label="Email address"
+                    placeholder="Email address"
                     size="normal"
-                    sx={{ width: "95%", margin: "1rem 0 0 1rem" }}
-                  />
-                  <TextField
-                    label="Contact number"
-                    size="normal"
-                    sx={{ width: "95%", margin: "1rem 0 0 1rem" }}
-                  />
-                  <TextField
-                    label="message"
-                    size="normal"
-                    id="outlined-required"
-                    sx={{
-                      width: "95%",
-                      margin: "1rem 0 0 1rem",
-                    }}
                     inputProps={{
                       style: {
+                        color: "#949494",
+                        fontWeight: "bold",
+                      },
+                    }}
+                    InputLabelProps={{
+                      shrink: true,
+                      style: {
+                        top: "-15%",
+                        color: "#b3b3b3",
+                        fontWeight: "bolder",
+                        fontSize: "1.1rem",
+                      },
+                    }}
+                  />
+                  <ContactInputTwo
+                    label="Contact number"
+                    placeholder="Contact number"
+                    size="normal"
+                    inputProps={{
+                      style: {
+                        color: "#949494",
+                        fontWeight: "bold",
+                      },
+                    }}
+                    InputLabelProps={{
+                      shrink: true,
+                      style: {
+                        top: "-15%",
+                        color: "#b3b3b3",
+                        fontWeight: "bolder",
+                        fontSize: "1.1rem",
+                      },
+                    }}
+                  />
+                  <ContactInputTwo
+                    label="message"
+                    placeholder="message"
+                    size="normal"
+                    inputProps={{
+                      style: {
+                        color: "#949494",
+                        fontWeight: "bold",
                         height: "10rem",
+                        "&.placeholder": {
+                          textOverflow: "ellipsis !important",
+                          color: "blue",
+                        },
+                      },
+                    }}
+                    InputLabelProps={{
+                      shrink: true,
+                      style: {
+                        top: "-5%",
+                        color: "#b3b3b3",
+                        fontWeight: "bolder",
+                        fontSize: "1.1rem",
                       },
                     }}
                   />
