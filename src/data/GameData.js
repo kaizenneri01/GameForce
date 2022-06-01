@@ -1,3 +1,4 @@
+import { Navigate } from "react-router-dom";
 import {
   ImageOne,
   ImageTwo,
@@ -72,6 +73,7 @@ export const GameData = [
     publisher: "sone interactive entertainment",
     genre: ["adventure", "action", "singleplayer"],
     cost: "P 1,500.75",
+    link: "/mainGame/GodofWar",
     type: "featured",
   },
   {
@@ -82,6 +84,7 @@ export const GameData = [
     publisher: "square enix",
     genre: ["adventure", "action", "singleplayer"],
     cost: "P 2,000.50",
+    link: "/mainGame/ShadowOfTombraider",
     type: "featured",
   },
   {
@@ -92,6 +95,7 @@ export const GameData = [
     publisher: "2k sports",
     genre: ["sports", "multiplayer"],
     cost: "P 1,200.55",
+    link: "/mainGame/nba2k21",
     type: "featured",
   },
   {
@@ -102,6 +106,7 @@ export const GameData = [
     publisher: "rockstar games",
     genre: ["open world", "adventure", "action", "shooting"],
     cost: "P 1,500.50",
+    link: "/mainGame/redDead2",
     type: "featured",
   },
   {
@@ -112,6 +117,7 @@ export const GameData = [
     publisher: "techland",
     genre: ["open world", "zombies", "co-op"],
     cost: "P 2,900.00",
+    link: "/mainGame/dyinglight2",
     type: "featured",
   },
   {

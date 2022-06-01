@@ -8,10 +8,13 @@ import {
   GameImage,
   GameTitle,
 } from "../styles/GameBoxLargeStyles";
+import { useNavigate } from "react-router-dom";
 
 const GameBoxLarge = ({ ...games }) => {
+  const navigate = useNavigate();
+
   return (
-    <GameCard elevation={5}>
+    <GameCard elevation={5} onClick={() => navigate(games.link)}>
       <GameImage component="img" src={games.image} alt={games.title} />
       <CardContent sx={{ height: "30%" }}>
         <Grid container>
