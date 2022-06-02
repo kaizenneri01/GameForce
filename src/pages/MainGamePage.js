@@ -1,3 +1,4 @@
+import { Grid } from "@mui/material";
 import React from "react";
 import { useParams } from "react-router-dom";
 import GameSearch from "../components/GameSearch";
@@ -12,11 +13,13 @@ const MainGamePage = () => {
     <>
       <NavigationBar />
       <GameSearch />
-      {GameData.filter((list) => list.link === `/mainGame/${gamename}`).map(
-        (data, index) => (
-          <MainGameBox key={index} {...data} />
-        )
-      )}
+      <Grid container sx={{ backgroundColor: "#303841" }}>
+        {GameData.filter((list) => list.link === `/mainGame/${gamename}`).map(
+          (data, index) => (
+            <MainGameBox key={index} {...data} />
+          )
+        )}
+      </Grid>
     </>
   );
 };
