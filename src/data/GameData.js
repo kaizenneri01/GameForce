@@ -1,4 +1,3 @@
-import { Navigate } from "react-router-dom";
 import {
   ImageOne,
   ImageTwo,
@@ -18,7 +17,16 @@ import {
   AboutPicTwo,
 } from "./ImageData";
 
-import { BattleOne, BattleTwo, BattleThree } from "./MulitipleImageData";
+import {
+  BattleOne,
+  BattleTwo,
+  BattleThree,
+  Godmini0,
+  Godmini1,
+  Godmini2,
+  Godmini3,
+  Godmini4,
+} from "./MulitipleImageData";
 
 export const GameData = [
   {
@@ -67,9 +75,13 @@ export const GameData = [
   },
   {
     image: GameOne,
+    video: "https://www.youtube.com/embed/EE-4GvjKcfs",
+    minipic: [Godmini0, Godmini1, Godmini2, Godmini3, Godmini4],
     title: "god of war",
     description:
       "God of War is an action-adventure game developed by Santa Monica Studio and published by Sony Interactive Entertainment.",
+    descriptionTwo:
+      "God of War[b] is an action-adventure game developed by Santa Monica Studio and published by Sony Interactive Entertainment (SIE). It was released in April 2018 for the PlayStation 4, with a Microsoft Windows version released in January 2022. The game is the eighth installment in the God of War series, the eighth chronologically, and the sequel to 2010's God of War III.",
     publisher: "sone interactive entertainment",
     genre: ["adventure", "action", "singleplayer"],
     cost: "P 1,500.75",
@@ -78,6 +90,7 @@ export const GameData = [
   },
   {
     image: GameTwo,
+    video: "https://www.youtube.com/embed/XYtyeqVQnRI",
     title: "shadow of the tomb raider",
     description:
       "Shadow of the Tomb Raider is a 2018 action-adventure video game developed by Eidos-Montréal and published by Square Enix's European subsidiary.",
@@ -89,6 +102,7 @@ export const GameData = [
   },
   {
     image: GameThree,
+    video: "https://www.youtube.com/embed/RJ_bxl5DwkM",
     title: "nba 2k21",
     description:
       "NBA 2K21 is a 2020 basketball simulation video game that was developed by Visual Concepts and published by 2K Sports, based on the National Basketball Association (NBA).",
@@ -100,6 +114,7 @@ export const GameData = [
   },
   {
     image: GameFour,
+    video: "https://www.youtube.com/embed/gmA6MrX81z4",
     title: "red dead 2",
     description:
       "Winner of over 175 Game of the Year Awards and recipient of over 250 perfect scores, RDR2 is the epic tale of outlaw Arthur Morgan and the infamous Van der Linde gang.",
@@ -111,6 +126,7 @@ export const GameData = [
   },
   {
     image: GameFive,
+    video: "https://www.youtube.com/embed/68bZ1LKKh7Q",
     title: "dying light 2",
     description:
       "Dying Light 2 Stay Human is a 2022 action role-playing game developed and published by Techland. The sequel to Dying Light",

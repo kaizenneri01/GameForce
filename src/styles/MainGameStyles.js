@@ -16,7 +16,7 @@ const MainCard = styled(Card)(() => ({
   backgroundColor: "#3A4750",
   marginLeft: "auto",
   marginRight: "auto",
-  marginBottom: "5rem",
+  marginBottom: "1rem",
 }));
 
 const MainContent = styled(CardContent)(() => ({
@@ -43,7 +43,7 @@ const MainButton = styled(Button)(() => ({
   color: "#EEEEEE",
   padding: "1rem",
   borderRadius: ".5rem",
-  fontSize: ".9rem",
+  fontSize: "2vh",
   textTransform: "capitalize",
   "&:hover": {
     backgroundColor: "#232222",
@@ -93,7 +93,19 @@ const MainDesc = styled(Typography)(() => ({
   marginBottom: "2rem",
 }));
 
+const MainGamePrice = styled(Button)(() => ({
+  backgroundColor: "#232222",
+  color: "#EEEEEE",
+  fontSize: "3.5vh",
+  fontWeight: "bolder",
+  cursor: "default",
+  "&:hover": {
+    backgroundColor: "#232222",
+  },
+}));
+
 export {
+  MainGamePrice,
   MainDesc,
   MainGenreText,
   MainGenre,

@@ -1,7 +1,6 @@
 import { Container, Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import { CardPrice } from "../styles/GameboxExtralargeStyles";
 import Slider from "react-slick";
 
 import {
@@ -9,6 +8,7 @@ import {
   MainCard,
   MainContent,
   MainDesc,
+  MainGamePrice,
   MainGenre,
   MainGenreText,
   MainTitle,
@@ -17,10 +17,10 @@ import {
 
 const MainGameBox = ({ ...data }) => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 4,
     slidesToScroll: 1,
   };
 
@@ -28,17 +28,17 @@ const MainGameBox = ({ ...data }) => {
     <>
       <MainCard>
         <Box sx={{ display: "flex", width: "100%" }} elevation={10}>
-          <MainVideo component="iframe" image={data.image} />
+          <MainVideo component="iframe" image={data.video} />
           <MainContent>
             <MainTitle variant="h4">{data.title}</MainTitle>
-            <MainDesc variant="subtitle1">{data.description}</MainDesc>
+            <MainDesc variant="subtitle1">{data.descriptionTwo}</MainDesc>
             <Box sx={{ display: "flex" }}>
               <MainGenreText>genres:</MainGenreText>
               {data.genre.map((genres, index) => (
                 <MainGenre key={index}>{genres}</MainGenre>
               ))}
             </Box>
-            <Box sx={{ display: "flex" }}>
+            <Box sx={{ display: "flex", flexWrap: "wrap", marginTop: "1rem" }}>
               <MainGenreText>Publisher:</MainGenreText>
               <MainGenre>{data.publisher}</MainGenre>
             </Box>
@@ -50,18 +50,42 @@ const MainGameBox = ({ ...data }) => {
                 height: "100%",
               }}
             >
-              <CardPrice disableRipple>{data.cost}</CardPrice>
+              <MainGamePrice disableRipple>{data.cost}</MainGamePrice>
               <MainButton>add to cart</MainButton>
             </Box>
           </MainContent>
         </Box>
       </MainCard>
-      <Container maxWidth="m">
-        <Slider {...settings}>
-          <Box>hello</Box>
-          <Box>hello</Box>
-        </Slider>
-      </Container>
+      <Grid container>
+        <Container
+          maxWidth={false}
+          sx={{
+            width: {
+              xl: "75vw",
+              lg: "70vw",
+              md: "80vw",
+              xs: "80vw",
+            },
+          }}
+        >
+          <Slider {...settings}>
+            {data.minipic.map((item, index) => (
+              <Box>
+                <Box
+                  key={index}
+                  component="img"
+                  src={item}
+                  sx={{
+                    height: "20vh",
+                    objectFit: "cover",
+                    margin: "1rem 0 1rem .4rem",
+                  }}
+                />
+              </Box>
+            ))}
+          </Slider>
+        </Container>
+      </Grid>
     </>
   );
 };
