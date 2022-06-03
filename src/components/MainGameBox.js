@@ -1,9 +1,11 @@
-import { Container, Grid, Typography } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import Slider from "react-slick";
 
 import {
+  EditionText,
   MainButton,
+  MainButtonTwo,
   MainCard,
   MainCardTwo,
   MainContent,
@@ -92,8 +94,8 @@ const MainGameBox = ({ ...data }) => {
             ))}
           </Slider>
         </Container>
+        <MainText>{`More About ${data.title}`}</MainText>
         <Grid container flexDirection="column">
-          <MainText>{`More About ${data.title}`}</MainText>
           <MainDescTwo variant="subtitle1">
             On our Windows 10 test rig consisting of an i5-3470 at 3.2GHz, 16GB
             RAM, an Nvidia GTX 1070, and a 500GB SSD Shadow of War was a treat
@@ -121,37 +123,77 @@ const MainGameBox = ({ ...data }) => {
           </MainDescTwo>
         </Grid>
         <Grid container>
-          <MainCardTwo>
-            <Grid container item xs={6}>
-              <Grid container flexDirection="column">
-                <Typography>title</Typography>
-                <Typography>description</Typography>
-              </Grid>
-              <Grid
-                container
-                alignItems="flex-end"
-                justifyContent="space-between"
-              >
-                <MainPrice>P 2,500.00</MainPrice>
-                <MainButton>add to cart</MainButton>
-              </Grid>
-            </Grid>
-            <Grid container item xs={6}>
-              <Grid container flexDirection="column">
-                <Typography>title</Typography>
-                <Typography>description</Typography>
-              </Grid>
-              <Grid
-                container
-                alignItems="flex-end"
-                justifyContent="space-between"
-              >
-                <MainPrice>P 2,500.00</MainPrice>
-                <MainButton>add to cart</MainButton>
-              </Grid>
-            </Grid>
-          </MainCardTwo>
+          <MainText>Edition</MainText>
         </Grid>
+        <MainCardTwo>
+          <Grid container item xs={6} alignItems="center">
+            <Box
+              sx={{
+                borderRight: " 2px solid red",
+                height: "60vh",
+                paddingRight: "3.5vw",
+              }}
+            >
+              <Grid container flexDirection="column" sx={{ height: "74%" }}>
+                <Grid contain item>
+                  <EditionText
+                    sx={{ textAlign: "center" }}
+                  >{`${data.title}: deluxe edition `}</EditionText>
+                </Grid>
+                <Grid container item>
+                  <EditionText>• Silver war chest</EditionText>
+                  <EditionText>
+                    • Two Nemesis expansions: Slaughter Tribe Nemesis expansion
+                    and Outlaw Tribe Nemesis expansions
+                  </EditionText>
+                </Grid>
+              </Grid>
+              <Grid
+                container
+                alignItems="flex-end"
+                justifyContent="space-between"
+                sx={{ height: "30%" }}
+              >
+                <MainPrice>P 1,500.00</MainPrice>
+                <MainButtonTwo>add to cart</MainButtonTwo>
+              </Grid>
+            </Box>
+          </Grid>
+          <Grid container item xs={6} alignItems="center">
+            <Box sx={{ height: "60vh" }}>
+              <Grid container flexDirection="column" sx={{ height: "75%" }}>
+                <Grid container item>
+                  <EditionText
+                    sx={{
+                      textAlign: "center",
+                    }}
+                  >{`${data.title}: gold edition`}</EditionText>
+                </Grid>
+                <Grid container item>
+                  <EditionText>• Gold war chest</EditionText>
+                  <EditionText>
+                    • Two Nemesis expansions: Slaughter Tribe Nemesis expansion
+                    and Outlaw Tribe Nemesis expansions
+                  </EditionText>
+                  <EditionText>
+                    • Two story expansions: the Blade of Galadriel story
+                    expansion and the Desolation of Mordor story expansion
+                  </EditionText>
+                </Grid>
+              </Grid>
+              <Grid
+                container
+                alignItems="flex-end"
+                justifyContent="space-between"
+                sx={{ height: "25%" }}
+              >
+                <MainPrice>P 2,500.00</MainPrice>
+                <MainButtonTwo>add to cart</MainButtonTwo>
+              </Grid>
+            </Box>
+          </Grid>
+        </MainCardTwo>
+        <Grid container></Grid>
       </Grid>
     </>
   );

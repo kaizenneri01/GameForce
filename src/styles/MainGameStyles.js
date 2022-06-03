@@ -22,8 +22,6 @@ const MainCard = styled(Card)(() => ({
 
 const MainCardTwo = styled(Box)(() => ({
   display: "flex",
-  justifyContent: "center",
-  marginTop: "3rem",
   borderRadius: "1rem",
   height: "70vh",
   width: "65vw",
@@ -64,12 +62,25 @@ const MainButton = styled(Button)(() => ({
   },
 }));
 
+const MainButtonTwo = styled(Button)(() => ({
+  backgroundColor: "#D72323",
+  color: "#EEEEEE",
+  padding: "1rem",
+  borderRadius: ".5rem",
+  fontSize: "1.5vh",
+  margin: "3rem",
+  textTransform: "capitalize",
+  "&:hover": {
+    backgroundColor: "#232222",
+  },
+}));
+
 const MainPrice = styled(Button)(() => ({
   backgroundColor: "#232222",
   color: "#EEEEEE",
-  fontSize: "1.5rem",
-  width: "10rem",
+  fontSize: "2.5vh",
   fontWeight: "bolder",
+  margin: "3rem",
   cursor: "default",
   "&:hover": {
     backgroundColor: "#232222",
@@ -132,12 +143,23 @@ const MainText = styled(Typography)(() => ({
   color: "#EEEEEE",
   fontSize: "5vh",
   margin: "5rem 0 3rem 2rem",
-  borderBottom: "2px #D72323 solid",
+  borderBottom: "3px #D72323 solid",
   fontWeight: "normal",
-  width: "30vw",
+  width: "auto",
+}));
+
+const EditionText = styled(Typography)(() => ({
+  color: "#EEEEEE",
+  fontSize: "2.5vh",
+  margin: "1rem 0 0 3rem",
+  fontWeight: "100",
+  overflowWrap: "breakWord",
+  inlineSize: "25vw",
+  textTransform: "capitalize",
 }));
 
 export {
+  EditionText,
   MainText,
   MainGamePrice,
   MainDesc,
@@ -149,6 +171,7 @@ export {
   MainContent,
   MainVideo,
   MainButton,
+  MainButtonTwo,
   MainPrice,
   MainMedia,
   MainTitle,
