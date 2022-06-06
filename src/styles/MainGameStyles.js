@@ -25,7 +25,18 @@ const MainCardTwo = styled(Box)(() => ({
   borderRadius: "1rem",
   height: "70vh",
   width: "65vw",
-  backgroundColor: "#3A4750",
+  backgroundColor: ["#3A4750"],
+  marginLeft: "auto",
+  marginRight: "auto",
+  marginBottom: "1rem",
+}));
+
+const MainCardThree = styled(Box)(() => ({
+  display: "flex",
+  borderRadius: "1rem",
+  height: "70vh",
+  width: "65vw",
+  backgroundColor: "#232222",
   marginLeft: "auto",
   marginRight: "auto",
   marginBottom: "1rem",
@@ -158,7 +169,19 @@ const EditionText = styled(Typography)(() => ({
   textTransform: "capitalize",
 }));
 
+const SubText = styled(Typography)(() => ({
+  color: "#EEEEEE",
+  fontSize: "2vh",
+  margin: "1rem 0 0 3rem",
+  fontWeight: "100",
+  overflowWrap: "breakWord",
+  inlineSize: "25vw",
+  textTransform: "capitalize",
+}));
+
 export {
+  SubText,
+  MainCardThree,
   EditionText,
   MainText,
   MainGamePrice,

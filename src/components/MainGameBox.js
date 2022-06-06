@@ -7,6 +7,7 @@ import {
   MainButton,
   MainButtonTwo,
   MainCard,
+  MainCardThree,
   MainCardTwo,
   MainContent,
   MainDesc,
@@ -18,6 +19,8 @@ import {
   MainText,
   MainTitle,
   MainVideo,
+  SubText,
+  TextBold,
 } from "../styles/MainGameStyles";
 
 const MainGameBox = ({ ...data }) => {
@@ -152,7 +155,7 @@ const MainGameBox = ({ ...data }) => {
                 container
                 alignItems="flex-end"
                 justifyContent="space-between"
-                sx={{ height: "30%" }}
+                sx={{ height: "auto" }}
               >
                 <MainPrice>P 1,500.00</MainPrice>
                 <MainButtonTwo>add to cart</MainButtonTwo>
@@ -185,7 +188,7 @@ const MainGameBox = ({ ...data }) => {
                 container
                 alignItems="flex-end"
                 justifyContent="space-between"
-                sx={{ height: "25%" }}
+                sx={{ height: "auto" }}
               >
                 <MainPrice>P 2,500.00</MainPrice>
                 <MainButtonTwo>add to cart</MainButtonTwo>
@@ -193,7 +196,99 @@ const MainGameBox = ({ ...data }) => {
             </Box>
           </Grid>
         </MainCardTwo>
-        <Grid container></Grid>
+        <Grid container>
+          <MainText>System Requirement</MainText>
+        </Grid>
+        <MainCardThree>
+          <Grid container item xs={6} alignItems="center">
+            <Box
+              sx={{
+                borderRight: " 2px solid red",
+                height: "60vh",
+                paddingRight: "3.5vw",
+              }}
+            >
+              <Grid container flexDirection="column" sx={{ height: "100%" }}>
+                <Grid contain item>
+                  <EditionText sx={{ textAlign: "center" }}>
+                    Minimum Requirement
+                  </EditionText>
+                </Grid>
+                <Grid
+                  container
+                  item
+                  justifyContent="center"
+                  sx={{ paddingTop: "2rem" }}
+                >
+                  <SubText>
+                    <strong>Os Version :</strong>&nbsp;&nbsp; Windows 10
+                  </SubText>
+                  <SubText>
+                    <strong>Processor :</strong>&nbsp;&nbsp; AMD FX-4350, 4.2
+                    GHz / Intel Core i5-2300, 2.80 GHz
+                  </SubText>
+                  <SubText>
+                    <strong>Memory :</strong>&nbsp;&nbsp; 6GB RAM
+                  </SubText>
+                  <SubText>
+                    <strong>Graphics :</strong>&nbsp;&nbsp; AMD HD 7870, 2GB /
+                    Nvidia GTX 660, 2GB
+                  </SubText>
+                  <SubText>
+                    <strong>DirectX :</strong>&nbsp;&nbsp; Version 11
+                  </SubText>
+                  <SubText>
+                    <strong>Storage :</strong>&nbsp;&nbsp; 70GB available space
+                  </SubText>
+                </Grid>
+              </Grid>
+            </Box>
+          </Grid>
+          <Grid container item xs={6} alignItems="center">
+            <Box sx={{ height: "60vh" }}>
+              <Grid container flexDirection="column" sx={{ height: "100%" }}>
+                <Grid container item>
+                  <EditionText
+                    sx={{
+                      textAlign: "center",
+                    }}
+                  >
+                    {" "}
+                    Recommended Requirement
+                  </EditionText>
+                </Grid>
+                <Grid
+                  container
+                  item
+                  justifyContent="center"
+                  sx={{ paddingTop: "2rem" }}
+                >
+                  <SubText>
+                    <strong>Os Version :</strong>&nbsp;&nbsp; Windows 10
+                    Creators Update
+                  </SubText>
+                  <SubText>
+                    <strong>Processor :</strong>&nbsp;&nbsp; AMD FX-8350, 4.0
+                    GHz / Intel Core i7-3770, 3.4 GHz
+                  </SubText>
+                  <SubText>
+                    <strong>Memory :</strong>&nbsp;&nbsp; 12GB RAM
+                  </SubText>
+                  <SubText>
+                    <strong>Graphics :</strong>&nbsp;&nbsp; AMD RX 480, 4GB or
+                    RX580, 4GB / Nvidia GTX 970 4GB or GTX1060, 6GB
+                  </SubText>
+                  <SubText>
+                    <strong>DirectX :</strong>&nbsp;&nbsp; Version 11
+                  </SubText>
+                  <SubText>
+                    <strong>Storage :</strong>&nbsp;&nbsp; 70GB available space
+                  </SubText>
+                </Grid>
+              </Grid>
+            </Box>
+          </Grid>
+        </MainCardThree>
       </Grid>
     </>
   );

@@ -32,7 +32,7 @@ const GamesPage = () => {
       <GameSearch />
       <TextStyle>NEW RELEASE</TextStyle>
       <Grid container direction="row" justifyContent="center">
-        <Container maxWidth={false}>
+        <Container maxWidth="lg">
           {GameComponent({
             name: "new release",
             container: "extra",
