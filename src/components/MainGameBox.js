@@ -20,7 +20,6 @@ import {
   MainTitle,
   MainVideo,
   SubText,
-  TextBold,
 } from "../styles/MainGameStyles";
 
 const MainGameBox = ({ ...data }) => {
