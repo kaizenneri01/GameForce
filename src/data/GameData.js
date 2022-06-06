@@ -26,6 +26,16 @@ import {
   Godmini2,
   Godmini3,
   Godmini4,
+  Stomb0,
+  Stomb1,
+  Stomb2,
+  Stomb3,
+  Stomb4,
+  NbaMini0,
+  NbaMini1,
+  NbaMini2,
+  NbaMini3,
+  NbaMini4,
 } from "./MulitipleImageData";
 
 export const GameData = [
@@ -91,9 +101,12 @@ export const GameData = [
   {
     image: GameTwo,
     video: "https://www.youtube.com/embed/XYtyeqVQnRI",
+    minipic: [Stomb0, Stomb1, Stomb2, Stomb3, Stomb4],
     title: "shadow of the tomb raider",
     description:
       "Shadow of the Tomb Raider is a 2018 action-adventure video game developed by Eidos-Montréal and published by Square Enix's European subsidiary.",
+    descriptionTwo:
+      "Shadow of the Tomb Raider is a 2018 action-adventure video game developed by Eidos-Montréal and published by Square Enix's European subsidiary. It continues the narrative from the 2015 game Rise of the Tomb Raider and is the twelfth mainline entry in the Tomb Raider series, as well as the third and final entry of the Survivor trilogy.",
     publisher: "square enix",
     genre: ["adventure", "action", "singleplayer"],
     cost: "P 2,000.50",
@@ -103,9 +116,12 @@ export const GameData = [
   {
     image: GameThree,
     video: "https://www.youtube.com/embed/RJ_bxl5DwkM",
+    minipic: [NbaMini0, NbaMini1, NbaMini2, NbaMini3, NbaMini4],
     title: "nba 2k21",
     description:
       "NBA 2K21 is a 2020 basketball simulation video game that was developed by Visual Concepts and published by 2K Sports, based on the National Basketball Association (NBA).",
+    descriptionTwo:
+      "NBA 2K21 is a 2020 basketball simulation video game that was developed by Visual Concepts and published by 2K Sports, based on the National Basketball Association (NBA). It is the 22nd installment in the NBA 2K franchise and the successor to NBA 2K20, and the predecessor to NBA 2K22. The game was released on September 4, 2020 for Microsoft Windows, Nintendo Switch, PlayStation 4, Xbox One, and Google Stadia,",
     publisher: "2k sports",
     genre: ["sports", "multiplayer"],
     cost: "P 1,200.55",

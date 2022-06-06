@@ -96,7 +96,9 @@ const MainGameBox = ({ ...data }) => {
             ))}
           </Slider>
         </Container>
-        <MainText>{`More About ${data.title}`}</MainText>
+        <Grid container>
+          <MainText>{`More About ${data.title}`}</MainText>
+        </Grid>
         <Grid container flexDirection="column">
           <MainDescTwo variant="subtitle1">
             On our Windows 10 test rig consisting of an i5-3470 at 3.2GHz, 16GB
