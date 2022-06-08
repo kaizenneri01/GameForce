@@ -36,6 +36,16 @@ import {
   NbaMini2,
   NbaMini3,
   NbaMini4,
+  RedD0,
+  RedD1,
+  RedD2,
+  RedD3,
+  RedD4,
+  Dlight0,
+  Dlight1,
+  Dlight2,
+  Dlight3,
+  Dlight4,
 } from "./MulitipleImageData";
 
 export const GameData = [
@@ -45,6 +55,7 @@ export const GameData = [
     description:
       " Players control Ethan Winters, who searches for his kidnapped daughter in a village filled with mutant creatures.",
     genres: ["horror", "advendture", "firsperson"],
+    cost: "p 2,199.50",
     type: "landing",
   },
   {
@@ -131,9 +142,12 @@ export const GameData = [
   {
     image: GameFour,
     video: "https://www.youtube.com/embed/gmA6MrX81z4",
+    minipic: [RedD0, RedD1, RedD2, RedD3, RedD4],
     title: "red dead 2",
     description:
       "Winner of over 175 Game of the Year Awards and recipient of over 250 perfect scores, RDR2 is the epic tale of outlaw Arthur Morgan and the infamous Van der Linde gang.",
+    descriptionTwo:
+      "The game is presented through both first and third-person perspectives, and the player may freely roam in its interactive open world. Gameplay elements include shootouts, heists, hunting, horseback riding, interacting with non-player characters, and maintaining the character's honor rating through moral choices and deeds.",
     publisher: "rockstar games",
     genre: ["open world", "adventure", "action", "shooting"],
     cost: "P 1,500.50",
@@ -143,9 +157,12 @@ export const GameData = [
   {
     image: GameFive,
     video: "https://www.youtube.com/embed/68bZ1LKKh7Q",
+    minipic: [Dlight0, Dlight1, Dlight2, Dlight3, Dlight4],
     title: "dying light 2",
     description:
       "Dying Light 2 Stay Human is a 2022 action role-playing game developed and published by Techland. The sequel to Dying Light",
+    descriptionTwo:
+      "Dying Light 2 Stay Human is an action role-playing survival horror game featuring a zombie apocalyptic-themed open world. Set 22 years after Dying Light, it stars a new protagonist named Aiden Caldwell (voiced by Jonah Scott), who is equipped with various parkour skills. Players can perform actions such as climbing ledges, sliding, leaping off from edges, and wall running to quickly navigate the city.",
     publisher: "techland",
     genre: ["open world", "zombies", "co-op"],
     cost: "P 2,900.00",

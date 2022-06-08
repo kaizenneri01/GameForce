@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import GameSearch from "../components/GameSearch";
@@ -9,6 +9,10 @@ import { GameData } from "../data/GameData";
 
 const MainGamePage = () => {
   const { gamename } = useParams();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

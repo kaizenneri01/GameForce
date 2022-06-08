@@ -16,8 +16,28 @@ import NbaMini1 from "../Asset/images/games/nba1.jpg";
 import NbaMini2 from "../Asset/images/games/nba2.jpg";
 import NbaMini3 from "../Asset/images/games/nba3.jpg";
 import NbaMini4 from "../Asset/images/games/nba4.jpg";
+import RedD0 from "../Asset/images/games/rd0.jpg";
+import RedD1 from "../Asset/images/games/rd1.jpg";
+import RedD2 from "../Asset/images/games/rd2.jpg";
+import RedD3 from "../Asset/images/games/rd3.jpg";
+import RedD4 from "../Asset/images/games/rd4.jpg";
+import Dlight0 from "../Asset/images/games/dl0.jpg";
+import Dlight1 from "../Asset/images/games/dl1.jpg";
+import Dlight2 from "../Asset/images/games/dl2.jpg";
+import Dlight3 from "../Asset/images/games/dl3.jpg";
+import Dlight4 from "../Asset/images/games/dl4.jpg";
 
 export {
+  Dlight0,
+  Dlight1,
+  Dlight2,
+  Dlight3,
+  Dlight4,
+  RedD0,
+  RedD1,
+  RedD2,
+  RedD3,
+  RedD4,
   NbaMini0,
   NbaMini1,
   NbaMini2,
