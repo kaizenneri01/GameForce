@@ -30,7 +30,7 @@ const ContactCard = () => {
                     placeholder="First name"
                     inputProps={{
                       style: {
-                        color: "#949494",
+                        color: "#222",
                         fontWeight: "bold",
                       },
                     }}
@@ -50,7 +50,7 @@ const ContactCard = () => {
                     size="normal"
                     inputProps={{
                       style: {
-                        color: "#949494",
+                        color: "#222",
                         fontWeight: "bold",
                       },
                     }}
@@ -72,7 +72,7 @@ const ContactCard = () => {
                     size="normal"
                     inputProps={{
                       style: {
-                        color: "#949494",
+                        color: "#222",
                         fontWeight: "bold",
                       },
                     }}
@@ -92,7 +92,7 @@ const ContactCard = () => {
                     size="normal"
                     inputProps={{
                       style: {
-                        color: "#949494",
+                        color: "#222",
                         fontWeight: "bold",
                       },
                     }}
@@ -112,12 +112,11 @@ const ContactCard = () => {
                     size="normal"
                     inputProps={{
                       style: {
-                        color: "#949494",
+                        color: "#222",
                         fontWeight: "bold",
                         height: "10rem",
                         "&.placeholder": {
                           textOverflow: "ellipsis !important",
-                          color: "blue",
                         },
                       },
                     }}
