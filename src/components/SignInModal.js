@@ -7,7 +7,7 @@ import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 import HttpsRoundedIcon from "@mui/icons-material/HttpsRounded";
 import GoogleIcon from "@mui/icons-material/Google";
 
-const LoginModal = ({ open, onClose }) => {
+const SignInModal = ({ open, onClose }) => {
   return (
     <Modal open={open} onClose={onClose}>
       <LoginBox>
@@ -35,7 +35,7 @@ const LoginModal = ({ open, onClose }) => {
               placeholder="Email address.."
               sx={{
                 backgroundColor: "#EEEEEE",
-                width: "75%",
+                width: "70%",
                 padding: ".7rem",
                 borderRadius: "0 .5rem .5rem 0",
                 fontWeight: "bold",
@@ -62,7 +62,7 @@ const LoginModal = ({ open, onClose }) => {
               placeholder="Password.."
               sx={{
                 backgroundColor: "#EEEEEE",
-                width: "75%",
+                width: "70%",
                 padding: ".5rem",
                 borderRadius: "0 .5rem .5rem 0",
                 fontWeight: "bold",
@@ -90,7 +90,16 @@ const LoginModal = ({ open, onClose }) => {
             </Grid>
             <Grid container item xs={6} justifyContent="center">
               <Button
-                sx={{ fontSize: ".7rem", fontWeight: "700", color: "gray" }}
+                disableRipple
+                sx={{
+                  fontSize: ".7rem",
+                  fontWeight: "700",
+                  color: "gray",
+                  "&:hover": {
+                    backgroundColor: "#222",
+                    color: "#EEEEEE",
+                  },
+                }}
               >
                 Forgot Password
               </Button>
@@ -134,4 +143,4 @@ const LoginModal = ({ open, onClose }) => {
   );
 };
 
-export default LoginModal;
+export default SignInModal;

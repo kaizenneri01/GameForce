@@ -4,11 +4,13 @@ import { NavButton, NavLogo, NavContainer } from "../styles/NavStyles";
 
 import logo from "../Asset/images/games/gameforce.png";
 import { useNavigate } from "react-router-dom";
-import LoginModal from "./SignInModal";
+import SignUpModal from "./SignUpModal";
+import SignInModal from "./SignInModal";
 
 const NavigationBar = () => {
   let navigate = useNavigate();
-  const [open, setOpen] = useState(false);
+  const [openSignIn, setOpenSignIn] = useState(false);
+  const [openSignUp, setOpenSignUp] = useState(false);
 
   return (
     <NavContainer maxWidth={false}>
@@ -44,17 +46,22 @@ const NavigationBar = () => {
             <NavButton
               variant="text"
               disableRipple
-              onClick={() => setOpen(true)}
+              onClick={() => setOpenSignIn(true)}
             >
               sign in
             </NavButton>
-            <NavButton variant="text" disableRipple>
+            <NavButton
+              variant="text"
+              disableRipple
+              onClick={() => setOpenSignUp(true)}
+            >
               sign up
             </NavButton>
           </Grid>
         </Grid>
       </Grid>
-      <LoginModal open={open} onClose={() => setOpen(false)} />
+      <SignInModal open={openSignIn} onClose={() => setOpenSignIn(false)} />
+      <SignUpModal open={openSignUp} onClose={() => setOpenSignUp(false)} />
     </NavContainer>
   );
 };
