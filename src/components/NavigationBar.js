@@ -4,7 +4,7 @@ import { NavButton, NavLogo, NavContainer } from "../styles/NavStyles";
 
 import logo from "../Asset/images/games/gameforce.png";
 import { useNavigate } from "react-router-dom";
-import LoginModal from "./LoginModal";
+import LoginModal from "./SignInModal";
 
 const NavigationBar = () => {
   let navigate = useNavigate();
