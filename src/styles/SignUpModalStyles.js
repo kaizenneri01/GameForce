@@ -1,8 +1,6 @@
 import styled from "@emotion/styled";
 import { Box } from "@mui/system";
-import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
-import HttpsRoundedIcon from "@mui/icons-material/HttpsRounded";
-import { Input } from "@mui/material";
+import { Button, Input } from "@mui/material";
 
 const SignUpBox = styled(Box)(() => ({
   position: "absolute",
@@ -22,16 +20,6 @@ const LogoBox = styled(Box)(() => ({
   marginRight: "1.5rem",
 }));
 
-const SignUpEmail = styled(
-  AccountCircleRoundedIcon,
-  HttpsRoundedIcon
-)(() => ({
-  backgroundColor: "#303841",
-  padding: "1rem",
-  borderRadius: " .5rem 0 0 .5rem",
-  color: "#EEEEEE",
-}));
-
 const SignUpInput = styled(Input)(() => ({
   backgroundColor: "#EEEEEE",
   width: "70%",
@@ -40,4 +28,14 @@ const SignUpInput = styled(Input)(() => ({
   fontWeight: "bold",
 }));
 
-export { SignUpInput, SignUpEmail, SignUpBox, LogoBox };
+const SignUpBtn = styled(Button)(() => ({
+  width: "80%",
+  backgroundColor: "#303841",
+  fontWeight: "bold",
+  color: "#EEEEEE",
+  fontSize: "1.1rem",
+  padding: ".7rem",
+  marginTop: "1.5rem",
+}));
+
+export { SignUpInput, SignUpBtn, SignUpBox, LogoBox };
