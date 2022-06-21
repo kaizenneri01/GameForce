@@ -37,7 +37,7 @@ const CardSubtitle = styled(Typography)(() => ({
   color: "#AEAEAE",
   fontWeight: "lighter",
   wordWrap: "break-word",
-  maxWidth: "40%",
+  maxWidth: "50%",
 }));
 
 const HomeCard = styled(CardContent)(() => ({

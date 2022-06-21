@@ -9,6 +9,7 @@ import AboutPage from "./pages/AboutPage";
 import MainGamePage from "./pages/MainGamePage";
 import { LoginContext } from "./helper/Context";
 import { useState } from "react";
+import CartPage from "./pages/CartPage";
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -22,6 +23,7 @@ function App() {
           <Route path="/Games/SaleEvent" element={<SaleEventPage />} />
           <Route path="/About" element={<AboutPage />} />
           <Route path="/mainGame/:gamename" element={<MainGamePage />} />
+          <Route path="/Cart" element={<CartPage />} />
         </Routes>
       </LoginContext.Provider>
     </>

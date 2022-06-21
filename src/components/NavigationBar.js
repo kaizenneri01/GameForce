@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import React, { useContext, useState } from "react";
 import { NavButton, NavLogo, NavContainer } from "../styles/NavStyles";
 
@@ -12,9 +12,19 @@ const NavigationBar = () => {
   let navigate = useNavigate();
   const [openSignIn, setOpenSignIn] = useState(false);
   const [openSignUp, setOpenSignUp] = useState(false);
-  const [changeSignIn, setchangeSignIn] = useState("false");
 
   const { login, setLogin } = useContext(LoginContext);
+
+  const textStyle = {
+    fontSize: ".7rem",
+    fontWeight: "bold",
+  };
+
+  const textStyleTwo = {
+    fontSize: ".7rem",
+    fontWeight: "bold",
+    marginLeft: "-1.5rem",
+  };
 
   return (
     <NavContainer maxWidth={false}>
@@ -65,9 +75,13 @@ const NavigationBar = () => {
             </Grid>
           ) : (
             <Grid container item md={6} justifyContent="flex-end">
-              <NavButton>Wish list</NavButton>
-              <NavButton>cart</NavButton>
-              <NavButton onClick={() => setchangeSignIn("false")}>
+              <NavButton sx={textStyle} disableRipple>
+                Wish list
+              </NavButton>
+              <NavButton sx={textStyleTwo} disableRipple>
+                cart
+              </NavButton>
+              <NavButton onClick={() => setLogin(false)} disableRipple>
                 sign out
               </NavButton>
             </Grid>
