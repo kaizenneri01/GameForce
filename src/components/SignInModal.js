@@ -7,7 +7,12 @@ import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 import HttpsRoundedIcon from "@mui/icons-material/HttpsRounded";
 import GoogleIcon from "@mui/icons-material/Google";
 
-const SignInModal = ({ open, onClose }) => {
+const SignInModal = ({ open, onClose, login }) => {
+  const handlerClose = () => {
+    login();
+    onClose();
+  };
+
   return (
     <Modal open={open} onClose={onClose}>
       <LoginBox>
@@ -122,6 +127,7 @@ const SignInModal = ({ open, onClose }) => {
               padding: ".7rem",
               marginBottom: ".5rem",
             }}
+            onClick={handlerClose}
           >
             Sign in
           </Button>
