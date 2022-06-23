@@ -12,7 +12,6 @@ const NavigationBar = () => {
   let navigate = useNavigate();
   const [openSignIn, setOpenSignIn] = useState(false);
   const [openSignUp, setOpenSignUp] = useState(false);
-
   const { login, setLogin } = useContext(LoginContext);
 
   const textStyle = {
@@ -78,7 +77,11 @@ const NavigationBar = () => {
               <NavButton sx={textStyle} disableRipple>
                 Wish list
               </NavButton>
-              <NavButton sx={textStyleTwo} disableRipple>
+              <NavButton
+                sx={textStyleTwo}
+                disableRipple
+                onClick={() => navigate("/Cart")}
+              >
                 cart
               </NavButton>
               <NavButton onClick={() => setLogin(false)} disableRipple>

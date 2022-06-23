@@ -13,10 +13,11 @@ import CartPage from "./pages/CartPage";
 
 function App() {
   const [login, setLogin] = useState(false);
+  const [cartData, setCartData] = useState([]);
 
   return (
     <>
-      <LoginContext.Provider value={{ login, setLogin }}>
+      <LoginContext.Provider value={{ login, setLogin, cartData, setCartData }}>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/Games" element={<GamesPage />} />

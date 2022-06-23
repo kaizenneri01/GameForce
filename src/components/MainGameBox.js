@@ -1,6 +1,8 @@
 import { Container, Grid } from "@mui/material";
 import { Box } from "@mui/system";
+import { useContext, useEffect } from "react";
 import Slider from "react-slick";
+import { LoginContext } from "../helper/Context";
 
 import {
   EditionText,
@@ -31,6 +33,17 @@ const MainGameBox = ({ ...data }) => {
     slidesToScroll: 1,
   };
 
+  const { cartData } = useContext(LoginContext);
+
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
+
+  const addToCart = () => {
+    cartData.push(data);
+    console.log(cartData);
+  };
+
   return (
     <>
       <MainCard>
@@ -58,7 +71,7 @@ const MainGameBox = ({ ...data }) => {
               }}
             >
               <MainGamePrice disableRipple>{data.cost}</MainGamePrice>
-              <MainButton>add to cart</MainButton>
+              <MainButton onClick={addToCart}>add to cart</MainButton>
             </Box>
           </MainContent>
         </Box>
