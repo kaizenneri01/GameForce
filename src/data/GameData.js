@@ -50,6 +50,7 @@ import {
 
 export const GameData = [
   {
+    id: 1,
     image: ImageOne,
     title: "Resident evil Village",
     description:
@@ -59,6 +60,7 @@ export const GameData = [
     type: "landing",
   },
   {
+    id: 2,
     image: ImageTwo,
     title: "Horizon zero dawn",
     description:
@@ -68,6 +70,7 @@ export const GameData = [
     type: "landing",
   },
   {
+    id: 3,
     image: ImageThree,
     title: "Cyber punk 2077",
     description:
@@ -77,6 +80,7 @@ export const GameData = [
     type: "landing",
   },
   {
+    id: 4,
     image: ImageFour,
     title: "Borderlands 3",
     description:
@@ -86,6 +90,7 @@ export const GameData = [
     type: "landing",
   },
   {
+    id: 5,
     image: ImageFive,
     title: "Monster Hunter Worlds 3",
     description:
@@ -95,6 +100,7 @@ export const GameData = [
     type: "landing",
   },
   {
+    id: 6,
     image: GameOne,
     video: "https://www.youtube.com/embed/EE-4GvjKcfs",
     minipic: [Godmini0, Godmini1, Godmini2, Godmini3, Godmini4],
@@ -110,6 +116,7 @@ export const GameData = [
     type: "featured",
   },
   {
+    id: 7,
     image: GameTwo,
     video: "https://www.youtube.com/embed/XYtyeqVQnRI",
     minipic: [Stomb0, Stomb1, Stomb2, Stomb3, Stomb4],
@@ -125,6 +132,7 @@ export const GameData = [
     type: "featured",
   },
   {
+    id: 8,
     image: GameThree,
     video: "https://www.youtube.com/embed/RJ_bxl5DwkM",
     minipic: [NbaMini0, NbaMini1, NbaMini2, NbaMini3, NbaMini4],
@@ -135,11 +143,12 @@ export const GameData = [
       "NBA 2K21 is a 2020 basketball simulation video game that was developed by Visual Concepts and published by 2K Sports, based on the National Basketball Association (NBA). It is the 22nd installment in the NBA 2K franchise and the successor to NBA 2K20, and the predecessor to NBA 2K22. The game was released on September 4, 2020 for Microsoft Windows, Nintendo Switch, PlayStation 4, Xbox One, and Google Stadia,",
     publisher: "2k sports",
     genre: ["sports", "multiplayer"],
-    cost: "P 1,200.55",
+    cost: "1200.55",
     link: "/mainGame/nba2k21",
     type: "featured",
   },
   {
+    id: 9,
     image: GameFour,
     video: "https://www.youtube.com/embed/gmA6MrX81z4",
     minipic: [RedD0, RedD1, RedD2, RedD3, RedD4],
@@ -150,11 +159,12 @@ export const GameData = [
       "The game is presented through both first and third-person perspectives, and the player may freely roam in its interactive open world. Gameplay elements include shootouts, heists, hunting, horseback riding, interacting with non-player characters, and maintaining the character's honor rating through moral choices and deeds.",
     publisher: "rockstar games",
     genre: ["open world", "adventure", "action", "shooting"],
-    cost: "P 1,500.50",
+    cost: "1500.50",
     link: "/mainGame/redDead2",
     type: "featured",
   },
   {
+    id: 10,
     image: GameFive,
     video: "https://www.youtube.com/embed/68bZ1LKKh7Q",
     minipic: [Dlight0, Dlight1, Dlight2, Dlight3, Dlight4],
@@ -165,11 +175,12 @@ export const GameData = [
       "Dying Light 2 Stay Human is an action role-playing survival horror game featuring a zombie apocalyptic-themed open world. Set 22 years after Dying Light, it stars a new protagonist named Aiden Caldwell (voiced by Jonah Scott), who is equipped with various parkour skills. Players can perform actions such as climbing ledges, sliding, leaping off from edges, and wall running to quickly navigate the city.",
     publisher: "techland",
     genre: ["open world", "zombies", "co-op"],
-    cost: "P 2,900.00",
+    cost: "2900.00",
     link: "/mainGame/dyinglight2",
     type: "featured",
   },
   {
+    id: 11,
     image: "https://www.youtube.com/embed/P9fK77eE7fs",
     title: "Battlefield 4",
     description:
@@ -181,6 +192,7 @@ export const GameData = [
     type: "new release",
   },
   {
+    id: 12,
     image: "https://www.youtube.com/embed/AKXiKBnzpBQ",
     title: "Elden Ring",
     description:
@@ -192,6 +204,7 @@ export const GameData = [
     type: "new release",
   },
   {
+    id: 13,
     image: "https://www.youtube.com/embed/kyBbYndoyTE",
     title: "BACK 4 BLOOD",
     description:
@@ -203,6 +216,7 @@ export const GameData = [
     type: "new release",
   },
   {
+    id: 14,
     image: "https://www.youtube.com/embed/2MD4gTitmzw",
     title: "Dying Light 2",
     description:
@@ -214,6 +228,7 @@ export const GameData = [
     type: "new release",
   },
   {
+    id: 15,
     image: "https://www.youtube.com/embed/tCI396HyhbQ",
     title: "Death Stranding",
     description:
@@ -225,6 +240,7 @@ export const GameData = [
     type: "new release",
   },
   {
+    id: 16,
     image: GameSix,
     title: "Resident Evil 4",
     description:
@@ -237,6 +253,7 @@ export const GameData = [
     type: "best seller",
   },
   {
+    id: 17,
     image: GameSeven,
     title: "Tomb Raider",
     description:
@@ -249,6 +266,7 @@ export const GameData = [
     type: "best seller",
   },
   {
+    id: 18,
     image: GameEight,
     title: "The Witcher 3: Wild Hunt",
     description:
@@ -261,6 +279,7 @@ export const GameData = [
     type: "best seller",
   },
   {
+    id: 19,
     image: GameNine,
     title: "Batman: Arkham Knight",
     description:
@@ -273,6 +292,7 @@ export const GameData = [
     type: "best seller",
   },
   {
+    id: 20,
     image: GameFive,
     title: "",
     description: "",
@@ -282,6 +302,7 @@ export const GameData = [
     type: "",
   },
   {
+    id: 21,
     image: AboutPic,
     title: "about our Services",
     description: `In the fast changing globalized and a technology-driven business
@@ -293,6 +314,7 @@ export const GameData = [
     type: "aboutpage",
   },
   {
+    id: 22,
     image: AboutPicTwo,
     title: "about community",
     description: `In the broadest sense, a gaming community is an online community

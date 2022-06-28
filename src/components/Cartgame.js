@@ -5,17 +5,46 @@ import React from "react";
 const Cartgame = ({ ...item }) => {
   return (
     <>
-      <Box sx={{ borderBottom: "2px solid red", width: "85%", margin: "1rem" }}>
-        <Grid container item xs={6} justifyContent="flex-start">
+      <Box
+        sx={{
+          borderBottom: "2px solid red",
+          width: "85%",
+          margin: ".5rem 2rem",
+          padding: "1rem 0 1.5rem 0",
+          display: "flex",
+        }}
+      >
+        <Grid container item xs={6} flexDirection="row">
           <Box
             component="img"
             src={item.image}
             alt="games"
-            sx={{ height: "10vh" }}
+            sx={{ height: "20vh", width: "10vw", borderRadius: "1rem" }}
           />
-
-          <Typography>Title</Typography>
-          <Typography>package</Typography>
+          <Box>
+            <Typography
+              sx={{
+                color: "#EEEEEE",
+                marginLeft: "1rem",
+                fontSize: "2.5vh",
+                textTransform: "uppercase",
+                overflowWrap: "break-word",
+                inlineSize: "10rem",
+              }}
+            >
+              {item.title}
+            </Typography>
+            <Typography
+              sx={{
+                color: "gray",
+                margin: ".7rem 0 0 1rem",
+                fontSize: "2vh",
+                textTransform: "uppercase",
+              }}
+            >
+              base game
+            </Typography>
+          </Box>
         </Grid>
         <Grid
           container
@@ -25,8 +54,15 @@ const Cartgame = ({ ...item }) => {
           alignItems="flex-end"
           sx={{ marginLeft: "auto" }}
         >
-          <Button sx={{ backgroundColor: "#303841" }}>price</Button>
-          <Button sx={{ backgroundColor: "#D72323" }}>Remove</Button>
+          <Button
+            sx={{
+              backgroundColor: "#303841",
+              fontSize: "3vh",
+              color: "#EEEEEE",
+            }}
+          >
+            P {item.cost}
+          </Button>
         </Grid>
       </Box>
     </>

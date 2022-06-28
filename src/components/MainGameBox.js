@@ -40,7 +40,8 @@ const MainGameBox = ({ ...data }) => {
   }, [data]);
 
   const addToCart = () => {
-    cartData.push(data);
+    !cartData.map(({ id }) => id).includes(data.id) && cartData.push(data);
+    console.log(cartData.map(({ id }) => id));
     console.log(cartData);
   };
 

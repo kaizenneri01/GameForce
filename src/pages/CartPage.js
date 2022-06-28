@@ -1,4 +1,4 @@
-import { Button, Grid, Typography } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useContext, useEffect, useState } from "react";
 import Cartgame from "../components/Cartgame";
@@ -23,12 +23,12 @@ const arrange = {
 };
 
 const CartPage = () => {
-  const { cartData } = useContext(LoginContext);
+  const { cartData, setCartData } = useContext(LoginContext);
   const [totalCost, setTotalCost] = useState([]);
 
   useEffect(() => {
     setTotalCost(cartData.map((item) => item.cost));
-  }, []);
+  }, [cartData]);
 
   const totalPrice = totalCost.reduce((total, item) => {
     return total + Number(item);
@@ -54,6 +54,29 @@ const CartPage = () => {
               {cartData.map((item, index) => (
                 <>
                   <Cartgame key={index} {...item} />
+                  <Button
+                    disableRipple
+                    sx={{
+                      marginLeft: "-110px",
+                      marginTop: "90px",
+                      height: "3rem",
+                      color: "#EEEEEE",
+                      backgroundColor: "#D72323",
+                      "&:hover": {
+                        backgroundColor: "#D72323",
+                      },
+                    }}
+                    onClick={() => {
+                      setCartData(
+                        cartData.filter((citem) => citem.id !== item.id)
+                      );
+                      setTotalCost(
+                        cartData.filter((citem) => citem.cost !== item.cost)
+                      );
+                    }}
+                  >
+                    remove
+                  </Button>
                 </>
               ))}
             </Grid>

@@ -23,6 +23,7 @@ import GameBoxSmall from "../components/GameBoxSmall";
 import NavigationBar from "../components/NavigationBar";
 import { useNavigate } from "react-router-dom";
 import { Box } from "@mui/system";
+import Footer from "../components/Footer";
 
 const Homepage = () => {
   let navigate = useNavigate();
@@ -117,7 +118,7 @@ const Homepage = () => {
       </HomeContainer>
       <Grid
         container
-        sx={{ backgroundColor: "#232222", paddingBottom: "1rem" }}
+        sx={{ backgroundColor: "#3A4750", paddingBottom: "1rem" }}
       >
         <Grid container>
           <SpecialText>special offer</SpecialText>
@@ -136,6 +137,7 @@ const Homepage = () => {
           <SpecialArrow />
         </Grid>
       </Grid>
+      <Footer />
     </>
   );
 };

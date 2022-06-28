@@ -8,6 +8,8 @@ const CartPageBox = styled(Box)(() => ({
   width: "60vw",
   margin: "2rem",
   borderRadius: "2rem",
+  position: "relative",
+  overflowY: "scroll",
 }));
 
 const CartPageBoxTwo = styled(Box)(() => ({
