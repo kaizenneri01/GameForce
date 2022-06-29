@@ -1,4 +1,4 @@
-import { Container, Grid } from "@mui/material";
+import { Container, Grid, StepContext } from "@mui/material";
 import { Box } from "@mui/system";
 import { useContext, useEffect } from "react";
 import Slider from "react-slick";
@@ -35,14 +35,10 @@ const MainGameBox = ({ ...data }) => {
 
   const { cartData } = useContext(LoginContext);
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
-
   const addToCart = () => {
     !cartData.map(({ id }) => id).includes(data.id) && cartData.push(data);
     console.log(cartData.map(({ id }) => id));
-    console.log(cartData);
+    console.log(cartData.filter(({ id }) => id === data.id));
   };
 
   return (
@@ -72,7 +68,11 @@ const MainGameBox = ({ ...data }) => {
               }}
             >
               <MainGamePrice disableRipple>{data.cost}</MainGamePrice>
-              <MainButton onClick={addToCart}>add to cart</MainButton>
+              {!cartData.length ? (
+                <MainButton onClick={addToCart}>add to cart</MainButton>
+              ) : (
+                <MainButton disableTouchRipple>added</MainButton>
+              )}
             </Box>
           </MainContent>
         </Box>

@@ -52,10 +52,15 @@ export const GameData = [
   {
     id: 1,
     image: ImageOne,
+    video: "",
+    minipic: [],
     title: "Resident evil Village",
     description:
       " Players control Ethan Winters, who searches for his kidnapped daughter in a village filled with mutant creatures.",
+    descriptionTwo: "",
     genres: ["horror", "advendture", "firsperson"],
+    publisher: "",
+    link: "",
     cost: "p 2,199.50",
     type: "landing",
   },

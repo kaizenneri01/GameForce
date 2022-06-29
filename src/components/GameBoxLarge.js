@@ -41,7 +41,7 @@ const GameBoxLarge = ({ ...games }) => {
           }}
           disableRipple
         >
-          {games.cost}
+          P {games.cost}
         </Button>
       </Grid>
     </GameCard>
